@@ -568,7 +568,7 @@
     <header class="top-bar">
 
         <a
-            href="../Index.html#subjects"
+            href="../index.html#subjects"
             class="back-button"
         >
             ← Subjects
@@ -717,11 +717,17 @@
 
             if (document.body.classList.contains("dark")) {
 
-                localStorage.setItem("pencil-beats-theme", "dark");
+                localStorage.setItem(
+                    "pencil-beats-theme",
+                    "dark"
+                );
 
             } else {
 
-                localStorage.setItem("pencil-beats-theme", "light");
+                localStorage.setItem(
+                    "pencil-beats-theme",
+                    "light"
+                );
 
             }
 
@@ -737,16 +743,20 @@
         function updateThemeButton() {
 
             const themeButton =
-                document.getElementById("themeButton");
+                document.getElementById(
+                    "themeButton"
+                );
 
 
             if (document.body.classList.contains("dark")) {
 
-                themeButton.textContent = "☀️ Theme";
+                themeButton.textContent =
+                    "☀️ Theme";
 
             } else {
 
-                themeButton.textContent = "🌙 Theme";
+                themeButton.textContent =
+                    "🌙 Theme";
 
             }
         }
@@ -760,16 +770,22 @@
         function loadSavedTheme() {
 
             const savedTheme =
-                localStorage.getItem("pencil-beats-theme");
+                localStorage.getItem(
+                    "pencil-beats-theme"
+                );
 
 
             if (savedTheme === "dark") {
 
-                document.body.classList.add("dark");
+                document.body.classList.add(
+                    "dark"
+                );
 
             } else {
 
-                document.body.classList.remove("dark");
+                document.body.classList.remove(
+                    "dark"
+                );
 
             }
 

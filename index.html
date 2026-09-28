@@ -1,23 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-
-    <title>PENCIL BEATS</title>
-
+    <title>PENCIL BEATS | Mirza Shuaib</title>
 
     <style>
 
-        /* =========================================
-           RESET
-        ========================================== */
+        /* =========================================================
+           GLOBAL RESET
+        ========================================================= */
 
         * {
             margin: 0;
@@ -26,28 +19,42 @@
         }
 
 
-        html,
-        body {
-            width: 100%;
-            min-height: 100%;
+        html {
+            scroll-behavior: smooth;
         }
 
 
         body {
-            overflow-x: hidden;
+            min-height: 100vh;
+
             font-family:
+                Georgia,
                 "Times New Roman",
-                Times,
                 serif;
+
+            background: #f4f6f4;
+
+            color: #202520;
+
+            overflow-x: hidden;
+
+            transition:
+                background-color 0.3s ease,
+                color 0.3s ease;
         }
 
 
+        button,
+        a {
+            -webkit-tap-highlight-color: transparent;
+        }
 
-        /* =========================================
+
+        /* =========================================================
            SPLASH SCREEN
-        ========================================== */
+        ========================================================= */
 
-        .splash-screen {
+        #splashScreen {
 
             position: fixed;
 
@@ -60,9 +67,8 @@
 
             display: flex;
 
-            justify-content: center;
-
             align-items: center;
+            justify-content: center;
 
             text-align: center;
 
@@ -70,104 +76,450 @@
 
             overflow: hidden;
 
-
             background:
-
-                radial-gradient(
-                    circle at 15% 20%,
-                    rgba(73, 112, 90, 0.35),
-                    transparent 35%
-                ),
-
-                radial-gradient(
-                    circle at 85% 80%,
-                    rgba(110, 120, 114, 0.35),
-                    transparent 35%
-                ),
-
                 linear-gradient(
                     135deg,
-                    #123d2b,
-                    #355846,
-                    #69766f,
-                    #b8bfbb
+                    #eef2ef 0%,
+                    #dfe7e1 45%,
+                    #f2f4f2 100%
                 );
         }
 
 
+        /*
+         * Soft green and grey decorative background.
+         * No external image is required.
+         */
 
-        /* =========================================
-           FAINT BACKGROUND DESIGN
-        ========================================== */
-
-        .splash-screen::before {
+        #splashScreen::before {
 
             content: "";
 
             position: absolute;
 
-            width: 450px;
-            height: 450px;
+            width: 620px;
+            height: 620px;
 
-            left: -120px;
-            top: -120px;
+            left: -220px;
+            top: -250px;
 
             border-radius: 50%;
 
-            opacity: 0.08;
-
             background:
-
                 radial-gradient(
-                    ellipse at center,
-                    transparent 30%,
-                    white 31%,
-                    transparent 34%
+                    circle,
+                    rgba(40, 92, 59, 0.16) 0%,
+                    rgba(40, 92, 59, 0.07) 38%,
+                    transparent 70%
                 );
 
             pointer-events: none;
         }
 
 
-        .splash-screen::after {
+        #splashScreen::after {
 
             content: "";
 
             position: absolute;
 
-            width: 450px;
-            height: 450px;
+            width: 700px;
+            height: 700px;
 
-            right: -120px;
-            bottom: -120px;
+            right: -280px;
+            bottom: -320px;
 
             border-radius: 50%;
 
-            opacity: 0.08;
-
             background:
-
                 radial-gradient(
-                    ellipse at center,
-                    transparent 30%,
-                    white 31%,
-                    transparent 34%
+                    circle,
+                    rgba(83, 91, 86, 0.14) 0%,
+                    rgba(83, 91, 86, 0.06) 40%,
+                    transparent 72%
                 );
 
             pointer-events: none;
         }
 
 
+        /* =========================================================
+           DECORATIVE LEAF-LIKE SHAPES
+        ========================================================= */
 
-        /* =========================================
+        .splash-decoration {
+
+            position: absolute;
+
+            inset: 0;
+
+            overflow: hidden;
+
+            pointer-events: none;
+        }
+
+
+        .leaf {
+
+            position: absolute;
+
+            width: 90px;
+            height: 42px;
+
+            border-radius:
+                100% 0 100% 0;
+
+            background:
+                rgba(40, 92, 59, 0.055);
+
+            transform: rotate(35deg);
+        }
+
+
+        .leaf.one {
+            top: 13%;
+            left: 8%;
+        }
+
+
+        .leaf.two {
+            top: 26%;
+            right: 9%;
+
+            transform:
+                rotate(125deg);
+        }
+
+
+        .leaf.three {
+            bottom: 19%;
+            left: 11%;
+
+            transform:
+                rotate(75deg);
+        }
+
+
+        .leaf.four {
+            bottom: 11%;
+            right: 12%;
+
+            transform:
+                rotate(150deg);
+        }
+
+
+        /* =========================================================
            SPLASH CONTENT
-        ========================================== */
+        ========================================================= */
 
         .splash-content {
 
             position: relative;
 
-            z-index: 2;
+            z-index: 5;
+
+            width: 92%;
+
+            max-width: 1200px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            justify-content: center;
+        }
+
+
+        .main-logo {
+
+            font-family:
+                "Times New Roman",
+                Georgia,
+                serif;
+
+            font-size:
+                clamp(
+                    55px,
+                    9vw,
+                    125px
+                );
+
+            font-weight: 700;
+
+            letter-spacing: 4px;
+
+            line-height: 1;
+
+            color: #285c3b;
+
+            user-select: none;
+
+            text-shadow:
+                0 2px 2px
+                rgba(0, 0, 0, 0.04);
+
+            animation:
+                logoAppear 1s ease forwards;
+        }
+
+
+        @keyframes logoAppear {
+
+            from {
+                opacity: 0;
+                transform:
+                    translateY(14px);
+            }
+
+            to {
+                opacity: 1;
+                transform:
+                    translateY(0);
+            }
+        }
+
+
+        .tap-text {
+
+            margin-top: 32px;
+
+            font-size: 18px;
+
+            color: #565e58;
+
+            letter-spacing: 0.2px;
+
+            animation:
+                tapAppear 1.2s ease forwards;
+
+            user-select: none;
+        }
+
+
+        @keyframes tapAppear {
+
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+
+        .author-name {
+
+            position: absolute;
+
+            z-index: 6;
+
+            left: 0;
+            right: 0;
+
+            bottom: 25px;
+
+            text-align: center;
+
+            font-family:
+                "Times New Roman",
+                Georgia,
+                serif;
+
+            font-size: 18px;
+
+            font-weight: 500;
+
+            color: #000000;
+
+            user-select: none;
+        }
+
+
+        /* =========================================================
+           SUBJECT SCREEN
+        ========================================================= */
+
+        #subjectScreen {
+
+            display: none;
+
+            min-height: 100vh;
+
+            background: #f4f6f4;
+
+            color: #202520;
+
+            transition:
+                background-color 0.3s ease,
+                color 0.3s ease;
+        }
+
+
+        /* =========================================================
+           SUBJECT NAVIGATION
+        ========================================================= */
+
+        .subjects-topbar {
+
+            width: 100%;
+
+            min-height: 68px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: flex-end;
+
+            padding:
+                0 32px;
+
+            background:
+                rgba(255, 255, 255, 0.97);
+
+            border-bottom:
+                1px solid #d9dfda;
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 100;
+
+            transition:
+                background-color 0.3s ease,
+                border-color 0.3s ease;
+        }
+
+
+        .theme-button {
+
+            border: none;
+
+            outline: none;
+
+            cursor: pointer;
+
+            padding:
+                10px 17px;
+
+            border-radius: 22px;
+
+            background: #285c3b;
+
+            color: #ffffff;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: 14px;
+
+            font-weight: 600;
+
+            transition:
+                background-color 0.2s ease,
+                transform 0.2s ease;
+        }
+
+
+        .theme-button:hover {
+
+            background: #1d4b2e;
+
+            transform:
+                translateY(-1px);
+        }
+
+
+        /* =========================================================
+           SUBJECT HEADER
+        ========================================================= */
+
+        .subjects-header {
+
+            width: 92%;
+
+            max-width: 1100px;
+
+            margin: 0 auto;
+
+            padding:
+                55px 0 40px;
+
+            text-align: center;
+        }
+
+
+        .subjects-header h1 {
+
+            font-size:
+                clamp(
+                    40px,
+                    6vw,
+                    62px
+                );
+
+            line-height: 1.15;
+
+            color: #285c3b;
+
+            margin-bottom: 12px;
+        }
+
+
+        .subjects-header p {
+
+            color: #626a64;
+
+            font-size: 17px;
+
+            line-height: 1.5;
+        }
+
+
+        /* =========================================================
+           SUBJECT CARDS CONTAINER
+        ========================================================= */
+
+        .subjects-container {
+
+            width: 92%;
+
+            max-width: 1100px;
+
+            margin: 0 auto;
+
+            padding-bottom: 75px;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(
+                    2,
+                    minmax(0, 1fr)
+                );
+
+            gap: 28px;
+        }
+
+
+        /* =========================================================
+           SUBJECT CARD
+        ========================================================= */
+
+        .subject-card {
+
+            min-height: 205px;
+
+            position: relative;
+
+            overflow: hidden;
 
             display: flex;
 
@@ -175,265 +527,59 @@
 
             justify-content: center;
 
-            align-items: center;
-        }
-
-
-
-        /* =========================================
-           PENCIL BEATS
-        ========================================== */
-
-        .splash-content h1 {
-
-            color: white;
-
-            font-family:
-                "Times New Roman",
-                Times,
-                serif;
-
-            font-size:
-                clamp(
-                    65px,
-                    10vw,
-                    150px
-                );
-
-            font-weight: bold;
-
-            letter-spacing: 7px;
-
-            line-height: 1;
-
-            text-shadow:
-                0 5px 25px
-                rgba(0, 0, 0, 0.25);
-        }
-
-
-
-        /* =========================================
-           CONTINUE TEXT
-        ========================================== */
-
-        .continue-text {
-
-            margin-top: 25px;
-
-            color:
-                rgba(
-                    255,
-                    255,
-                    255,
-                    0.92
-                );
-
-            font-size: 20px;
-
-            letter-spacing: 1px;
-
-            animation:
-                pulse 2s infinite;
-        }
-
-
-
-        /* =========================================
-           CREATOR NAME
-        ========================================== */
-
-        .creator {
-
-            position: absolute;
-
-            bottom: 25px;
-
-            left: 0;
-            right: 0;
-
-            z-index: 3;
-
-            text-align: center;
-
-            color: black;
-
-            font-family:
-                "Times New Roman",
-                Times,
-                serif;
-
-            font-size: 18px;
-
-            font-weight: 500;
-
-            letter-spacing: 0.5px;
-        }
-
-
-
-        /* =========================================
-           PULSE ANIMATION
-        ========================================== */
-
-        @keyframes pulse {
-
-            0% {
-                opacity: 0.45;
-            }
-
-            50% {
-                opacity: 1;
-            }
-
-            100% {
-                opacity: 0.45;
-            }
-
-        }
-
-
-
-        /* =========================================
-           SUBJECT SCREEN
-        ========================================== */
-
-        .subject-screen {
-
-            min-height: 100vh;
-
-            width: 100%;
-
-            padding:
-                55px 30px;
-
-            display: none;
-
-            background:
-
-                linear-gradient(
-                    135deg,
-                    #ffffff,
-                    #f4f7f5
-                );
-
-            color: #203127;
-        }
-
-
-
-        /* =========================================
-           SUBJECT HEADER
-        ========================================== */
-
-        .main-header {
-
-            max-width: 1150px;
-
-            margin:
-                0 auto 55px;
-
-            text-align: center;
-        }
-
-
-        .main-header h1 {
-
-            color: #1d6041;
-
-            font-family:
-                "Times New Roman",
-                Times,
-                serif;
-
-            font-size: 55px;
-
-            letter-spacing: 4px;
-        }
-
-
-        .main-header p {
-
-            margin-top: 10px;
-
-            color: #718078;
-
-            font-family:
-                "Segoe UI",
-                Arial,
-                sans-serif;
-
-            font-size: 17px;
-        }
-
-
-
-        /* =========================================
-           SUBJECT GRID
-        ========================================== */
-
-        .subjects {
-
-            max-width: 1150px;
-
-            margin: auto;
-
-            display: grid;
-
-            grid-template-columns:
-                repeat(
-                    2,
-                    minmax(280px, 1fr)
-                );
-
-            gap: 25px;
-        }
-
-
-
-        /* =========================================
-           SUBJECT CARD
-        ========================================== */
-
-        .subject-card {
-
-            display: block;
-
             text-decoration: none;
 
-            color: inherit;
-
-            padding: 40px;
-
-            min-height: 210px;
-
-            border-radius: 20px;
-
-            background:
-                rgba(
-                    255,
-                    255,
-                    255,
-                    0.85
-                );
+            background: #ffffff;
 
             border:
-                1px solid
-                #d9e1dc;
+                1px solid #d7ded8;
+
+            border-radius: 18px;
+
+            padding: 32px;
 
             box-shadow:
-                0 10px 35px
+                0 6px 20px
                 rgba(
-                    0,
-                    0,
-                    0,
-                    0.06
+                    30,
+                    50,
+                    35,
+                    0.07
                 );
 
             transition:
                 transform 0.25s ease,
                 box-shadow 0.25s ease,
-                border-color 0.25s ease;
+                border-color 0.25s ease,
+                background-color 0.3s ease;
+        }
+
+
+        /*
+         * Green top accent
+         */
+
+        .subject-card::before {
+
+            content: "";
+
+            position: absolute;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 4px;
+
+            background: #285c3b;
+
+            transform:
+                scaleX(0);
+
+            transform-origin: left;
+
+            transition:
+                transform 0.25s ease;
         }
 
 
@@ -443,340 +589,941 @@
                 translateY(-6px);
 
             border-color:
-                #6c9b82;
+                #89a28f;
 
             box-shadow:
-                0 18px 40px
+                0 13px 30px
                 rgba(
-                    0,
-                    0,
-                    0,
-                    0.10
+                    30,
+                    50,
+                    35,
+                    0.12
                 );
         }
 
 
+        .subject-card:hover::before {
+
+            transform:
+                scaleX(1);
+        }
+
+
+        /* =========================================================
+           SUBJECT CARD TEXT
+        ========================================================= */
+
         .subject-card h2 {
 
-            color: #205f40;
-
-            font-family:
-                "Times New Roman",
-                Times,
-                serif;
+            color: #285c3b;
 
             font-size: 28px;
 
-            margin-bottom: 15px;
+            line-height: 1.25;
+
+            margin-bottom: 13px;
+
+            font-weight: 600;
         }
 
 
         .subject-card p {
 
-            color: #718078;
+            color: #68706a;
 
             font-family:
-                "Segoe UI",
                 Arial,
+                Helvetica,
                 sans-serif;
 
-            font-size: 16px;
+            font-size: 14px;
 
-            line-height: 1.6;
+            line-height: 1.55;
+
+            max-width: 580px;
         }
 
 
+        /* =========================================================
+           COMING SOON BADGE
+        ========================================================= */
 
-        /* =========================================
+        .coming-badge {
+
+            display: inline-block;
+
+            width: fit-content;
+
+            margin-top: 16px;
+
+            padding:
+                8px 15px;
+
+            border-radius: 20px;
+
+            background: #e5eee8;
+
+            color: #285c3b;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size: 13px;
+
+            font-weight: 700;
+        }
+
+
+        /* =========================================================
+           PAGE FOOTER
+        ========================================================= */
+
+        .subjects-footer {
+
+            width: 92%;
+
+            max-width: 1100px;
+
+            margin:
+                0 auto;
+
+            padding:
+                0 0 35px;
+
+            text-align: center;
+
+            color: #7a817c;
+
+            font-size: 14px;
+        }
+
+
+        .subjects-footer strong {
+
+            color: #285c3b;
+
+            font-weight: 600;
+        }
+
+
+        /* =========================================================
+           DARK MODE
+        ========================================================= */
+
+        body.dark {
+
+            background: #202522;
+
+            color: #eeeeee;
+        }
+
+
+        body.dark #subjectScreen {
+
+            background: #202522;
+
+            color: #eeeeee;
+        }
+
+
+        body.dark .subjects-topbar {
+
+            background: #292e2b;
+
+            border-bottom-color:
+                #444c47;
+        }
+
+
+        body.dark .theme-button {
+
+            background: #53635a;
+
+            color: #ffffff;
+        }
+
+
+        body.dark .theme-button:hover {
+
+            background: #64766a;
+        }
+
+
+        body.dark .subjects-header h1 {
+
+            color: #a8d0b0;
+        }
+
+
+        body.dark .subjects-header p {
+
+            color: #b9c0bb;
+        }
+
+
+        body.dark .subject-card {
+
+            background: #2b312e;
+
+            border-color:
+                #47504a;
+
+            box-shadow:
+                0 8px 25px
+                rgba(
+                    0,
+                    0,
+                    0,
+                    0.22
+                );
+        }
+
+
+        body.dark .subject-card:hover {
+
+            border-color:
+                #708878;
+
+            box-shadow:
+                0 13px 30px
+                rgba(
+                    0,
+                    0,
+                    0,
+                    0.30
+                );
+        }
+
+
+        body.dark .subject-card::before {
+
+            background: #8fbd99;
+        }
+
+
+        body.dark .subject-card h2 {
+
+            color: #a8d0af;
+        }
+
+
+        body.dark .subject-card p {
+
+            color: #b8c0ba;
+        }
+
+
+        body.dark .coming-badge {
+
+            background: #39483e;
+
+            color: #b7d9bd;
+        }
+
+
+        body.dark .subjects-footer {
+
+            color: #9da59f;
+        }
+
+
+        body.dark .subjects-footer strong {
+
+            color: #a8d0b0;
+        }
+
+
+        /* =========================================================
            MOBILE
-        ========================================== */
+        ========================================================= */
 
         @media (max-width: 700px) {
 
-            .splash-content h1 {
+            #splashScreen {
 
-                font-size: 55px;
-
-                letter-spacing: 3px;
+                padding:
+                    20px;
             }
 
 
-            .continue-text {
+            .main-logo {
+
+                font-size:
+                    clamp(
+                        42px,
+                        12vw,
+                        65px
+                    );
+
+                letter-spacing: 2px;
+            }
+
+
+            .tap-text {
+
+                margin-top: 25px;
 
                 font-size: 16px;
             }
 
 
-            .creator {
-
-                font-size: 16px;
+            .author-name {
 
                 bottom: 20px;
+
+                font-size: 18px;
             }
 
 
-            .subjects {
+            .subjects-topbar {
+
+                min-height: 62px;
+
+                padding:
+                    0 18px;
+            }
+
+
+            .theme-button {
+
+                font-size: 13px;
+
+                padding:
+                    8px 14px;
+            }
+
+
+            .subjects-header {
+
+                padding:
+                    40px 0 30px;
+            }
+
+
+            .subjects-header h1 {
+
+                font-size: 36px;
+            }
+
+
+            .subjects-header p {
+
+                font-size: 15px;
+            }
+
+
+            .subjects-container {
+
+                width: 92%;
 
                 grid-template-columns: 1fr;
-            }
 
-
-            .main-header h1 {
-
-                font-size: 40px;
+                gap: 18px;
             }
 
 
             .subject-card {
 
-                padding: 28px;
+                min-height: 175px;
+
+                padding: 27px;
+
+                border-radius: 15px;
             }
 
+
+            .subject-card h2 {
+
+                font-size: 25px;
+            }
+
+
+            .subject-card p {
+
+                font-size: 14px;
+            }
+        }
+
+
+        /* =========================================================
+           SMALL MOBILE
+        ========================================================= */
+
+        @media (max-width: 400px) {
+
+            .main-logo {
+
+                font-size: 39px;
+
+                letter-spacing: 1px;
+            }
+
+
+            .tap-text {
+
+                font-size: 15px;
+            }
+
+
+            .author-name {
+
+                font-size: 17px;
+            }
+
+
+            .subjects-header h1 {
+
+                font-size: 32px;
+            }
+
+
+            .subject-card {
+
+                min-height: 160px;
+
+                padding: 23px;
+            }
+
+
+            .subject-card h2 {
+
+                font-size: 23px;
+            }
+        }
+
+
+        /* =========================================================
+           REDUCED MOTION
+        ========================================================= */
+
+        @media (prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+
+                animation-duration:
+                    0.01ms !important;
+
+                animation-iteration-count:
+                    1 !important;
+
+                transition-duration:
+                    0.01ms !important;
+
+                scroll-behavior:
+                    auto !important;
+            }
         }
 
     </style>
-
 </head>
 
 
 <body>
 
 
-<!-- =========================================
-     OPENING SCREEN
-========================================== -->
+    <!-- =========================================================
+         SPLASH SCREEN
+    ========================================================= -->
 
-<section
-    id="splashScreen"
-    class="splash-screen"
->
+    <section
+        id="splashScreen"
+        aria-label="PENCIL BEATS welcome screen"
+    >
+
+        <div class="splash-decoration">
+
+            <span class="leaf one"></span>
+            <span class="leaf two"></span>
+            <span class="leaf three"></span>
+            <span class="leaf four"></span>
+
+        </div>
 
 
-    <div class="splash-content">
+        <div class="splash-content">
+
+            <div class="main-logo">
+                PENCIL BEATS
+            </div>
 
 
-        <h1>
+            <div class="tap-text">
+                Tap anywhere on the screen to continue
+            </div>
+
+        </div>
+
+
+        <div class="author-name">
+            By Mirza Shuaib
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         SUBJECTS SCREEN
+    ========================================================= -->
+
+    <section
+        id="subjectScreen"
+        aria-label="Subjects"
+    >
+
+
+        <!-- SUBJECTS TOP BAR -->
+
+        <header class="subjects-topbar">
+
+            <button
+                type="button"
+                class="theme-button"
+                id="themeButton"
+                onclick="toggleTheme()"
+                aria-label="Change website theme"
+            >
+                🌙 Theme
+            </button>
+
+        </header>
+
+
+
+        <!-- SUBJECT HEADER -->
+
+        <section class="subjects-header">
+
+            <h1>
+                Subjects
+            </h1>
+
+
+            <p>
+                Select a subject to start studying
+            </p>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             SUBJECT CARDS
+        ====================================================== -->
+
+        <main class="subjects-container">
+
+
+            <!-- =================================================
+                 COMMUNICATION SKILLS
+            ================================================== -->
+
+            <a
+                href="Subjects/coming-soon.html"
+                class="subject-card"
+                aria-label="Communication Skills - Coming Soon"
+            >
+
+                <h2>
+                    Communication Skills
+                </h2>
+
+
+                <p>
+                    Notes and study material for
+                    Communication Skills.
+                </p>
+
+
+                <span class="coming-badge">
+                    Coming Soon
+                </span>
+
+            </a>
+
+
+
+            <!-- =================================================
+                 FUNDAMENTALS OF IT
+            ================================================== -->
+
+            <a
+                href="Fundamentals%20of%20IT/index.html"
+                class="subject-card"
+                aria-label="Open Fundamentals of IT"
+            >
+
+                <h2>
+                    Fundamentals of IT
+                </h2>
+
+
+                <p>
+                    Study material and notes for
+                    Fundamentals of Information Technology.
+                </p>
+
+            </a>
+
+
+
+            <!-- =================================================
+                 HEALTH AND WELLNESS
+            ================================================== -->
+
+            <a
+                href="Subjects/coming-soon.html"
+                class="subject-card"
+                aria-label="Health and Wellness - Coming Soon"
+            >
+
+                <h2>
+                    Health and Wellness
+                </h2>
+
+
+                <p>
+                    Notes and study material for
+                    Health and Wellness.
+                </p>
+
+
+                <span class="coming-badge">
+                    Coming Soon
+                </span>
+
+            </a>
+
+
+
+            <!-- =================================================
+                 DIGITAL & TECHNOLOGICAL SOLUTIONS
+            ================================================== -->
+
+            <a
+                href="Subjects/coming-soon.html"
+                class="subject-card"
+                aria-label="Digital and Technological Solutions - Coming Soon"
+            >
+
+                <h2>
+                    Digital &amp; Technological Solutions
+                </h2>
+
+
+                <p>
+                    Notes and study material for
+                    Digital &amp; Technological Solutions.
+                </p>
+
+
+                <span class="coming-badge">
+                    Coming Soon
+                </span>
+
+            </a>
+
+        </main>
+
+
+
+        <!-- FOOTER -->
+
+        <footer class="subjects-footer">
+
             PENCIL BEATS
-        </h1>
+            <br>
 
+            <strong>
+                By Mirza Shuaib
+            </strong>
 
-        <p class="continue-text">
-            Tap anywhere on the screen to continue
-        </p>
-
-
-    </div>
-
-
-    <p class="creator">
-        By Mirza Shuaib
-    </p>
-
-
-</section>
-
-
-
-<!-- =========================================
-     SUBJECTS SCREEN
-========================================== -->
-
-<main
-    id="subjectScreen"
-    class="subject-screen"
->
-
-
-    <header class="main-header">
-
-        <h1>
-            PENCIL BEATS
-        </h1>
-
-        <p>
-            DS4SEM — Semester 1
-        </p>
-
-    </header>
-
-
-
-    <section class="subjects">
-
-
-        <!-- =====================================
-             COMMUNICATION SKILLS
-        ====================================== -->
-
-        <a
-            href="Subjects/coming-soon.html"
-            class="subject-card"
-        >
-
-            <h2>
-                Communication Skills
-            </h2>
-
-            <p>
-                Communication Skills
-            </p>
-
-        </a>
-
-
-
-        <!-- =====================================
-             FUNDAMENTALS OF IT
-        ====================================== -->
-
-        <a
-            href="Fundamentals of IT/index.html"
-            class="subject-card"
-        >
-
-            <h2>
-                Fundamentals of IT
-            </h2>
-
-            <p>
-                Fundamentals of Information Technology
-            </p>
-
-        </a>
-
-
-
-        <!-- =====================================
-             HEALTH AND WELLNESS
-        ====================================== -->
-
-        <a
-            href="Subjects/coming-soon.html"
-            class="subject-card"
-        >
-
-            <h2>
-                Health and Wellness
-            </h2>
-
-            <p>
-                Health & Wellness
-            </p>
-
-        </a>
-
-
-
-        <!-- =====================================
-             DIGITAL & TECHNOLOGICAL SOLUTIONS
-        ====================================== -->
-
-        <a
-            href="Subjects/coming-soon.html"
-            class="subject-card"
-        >
-
-            <h2>
-                Digital & Technological Solutions
-            </h2>
-
-            <p>
-                Digital and Technological Solutions
-            </p>
-
-        </a>
+        </footer>
 
 
     </section>
 
 
-</main>
+
+    <!-- =========================================================
+         JAVASCRIPT
+    ========================================================= -->
+
+    <script>
+
+        /* =======================================================
+           ELEMENTS
+        ======================================================= */
+
+        const splashScreen =
+            document.getElementById(
+                "splashScreen"
+            );
+
+
+        const subjectScreen =
+            document.getElementById(
+                "subjectScreen"
+            );
+
+
+        const themeButton =
+            document.getElementById(
+                "themeButton"
+            );
 
 
 
-<!-- =========================================
-     JAVASCRIPT
-========================================== -->
+        /* =======================================================
+           SHOW SUBJECTS
+        ======================================================= */
 
-<script>
+        function showSubjects() {
 
-
-const splashScreen =
-    document.getElementById(
-        "splashScreen"
-    );
+            splashScreen.style.display =
+                "none";
 
 
-const subjectScreen =
-    document.getElementById(
-        "subjectScreen"
-    );
+            subjectScreen.style.display =
+                "block";
 
 
-
-/* =========================================
-   SHOW SUBJECTS
-========================================= */
-
-function showSubjects() {
-
-    splashScreen.style.display =
-        "none";
-
-    subjectScreen.style.display =
-        "block";
-
-}
+            window.scrollTo(
+                0,
+                0
+            );
+        }
 
 
 
-/* =========================================
-   SPLASH → SUBJECTS
-========================================= */
+        /* =======================================================
+           SHOW SPLASH
+        ======================================================= */
 
-function continueToWebsite() {
+        function showSplash() {
 
-    showSubjects();
-
-}
-
+            splashScreen.style.display =
+                "flex";
 
 
-/* =========================================
-   OPENING LOGIC
-========================================= */
-
-if (
-    window.location.hash ===
-    "#subjects"
-) {
-
-    showSubjects();
-
-}
-
-else {
-
-    subjectScreen.style.display =
-        "none";
-
-}
+            subjectScreen.style.display =
+                "none";
+        }
 
 
 
-/* =========================================
-   CLICK ANYWHERE ON SPLASH
-========================================= */
+        /* =======================================================
+           CONTINUE FROM SPLASH
+        ======================================================= */
 
-splashScreen.addEventListener(
-    "click",
-    continueToWebsite
-);
+        function continueToWebsite() {
+
+            /*
+             * #subjects is important.
+             *
+             * Other pages can use:
+             *
+             * ../index.html#subjects
+             *
+             * to return directly to the Subjects screen
+             * without displaying the splash screen again.
+             */
+
+            window.location.hash =
+                "subjects";
 
 
-</script>
+            showSubjects();
+        }
 
+
+
+        /* =======================================================
+           SPLASH CLICK
+        ======================================================= */
+
+        splashScreen.addEventListener(
+            "click",
+            continueToWebsite
+        );
+
+
+
+        /* =======================================================
+           THEME BUTTON
+        ======================================================= */
+
+        function updateThemeButton() {
+
+            if (
+                document.body.classList.contains(
+                    "dark"
+                )
+            ) {
+
+                themeButton.textContent =
+                    "☀️ Theme";
+
+            } else {
+
+                themeButton.textContent =
+                    "🌙 Theme";
+            }
+        }
+
+
+
+        function toggleTheme() {
+
+            document.body.classList.toggle(
+                "dark"
+            );
+
+
+            if (
+                document.body.classList.contains(
+                    "dark"
+                )
+            ) {
+
+                localStorage.setItem(
+                    "pencil-beats-theme",
+                    "dark"
+                );
+
+            } else {
+
+                localStorage.setItem(
+                    "pencil-beats-theme",
+                    "light"
+                );
+            }
+
+
+            updateThemeButton();
+        }
+
+
+
+        /* =======================================================
+           LOAD SAVED THEME
+        ======================================================= */
+
+        function loadSavedTheme() {
+
+            const savedTheme =
+                localStorage.getItem(
+                    "pencil-beats-theme"
+                );
+
+
+            if (
+                savedTheme === "dark"
+            ) {
+
+                document.body.classList.add(
+                    "dark"
+                );
+
+            } else {
+
+                document.body.classList.remove(
+                    "dark"
+                );
+            }
+
+
+            updateThemeButton();
+        }
+
+
+
+        /* =======================================================
+           HANDLE INITIAL PAGE STATE
+        ======================================================= */
+
+        function handleInitialPage() {
+
+            /*
+             * When someone visits:
+             *
+             * index.html
+             *
+             * show splash.
+             *
+             * When someone visits:
+             *
+             * index.html#subjects
+             *
+             * skip splash and show Subjects.
+             */
+
+            const currentHash =
+                window.location.hash.toLowerCase();
+
+
+            if (
+                currentHash === "#subjects"
+            ) {
+
+                showSubjects();
+
+            } else {
+
+                showSplash();
+            }
+        }
+
+
+
+        /* =======================================================
+           HANDLE HASH CHANGES
+        ======================================================= */
+
+        window.addEventListener(
+            "hashchange",
+            function () {
+
+                const currentHash =
+                    window.location.hash.toLowerCase();
+
+
+                if (
+                    currentHash === "#subjects"
+                ) {
+
+                    showSubjects();
+
+                } else {
+
+                    showSplash();
+                }
+
+            }
+        );
+
+
+
+        /* =======================================================
+           INITIALIZE WEBSITE
+        ======================================================= */
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            function () {
+
+                loadSavedTheme();
+
+                handleInitialPage();
+
+            }
+        );
+
+    </script>
 
 </body>
-
 </html>
