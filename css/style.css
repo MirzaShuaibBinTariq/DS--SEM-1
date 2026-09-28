@@ -1,0 +1,798 @@
+/* =========================================================
+   PENCIL BEATS — COMPLETE STYLE
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #ffffff;
+    color: #18231d;
+}
+
+
+/* =========================================================
+   WELCOME SCREEN
+========================================================= */
+
+.welcome-screen {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+
+    width: 100%;
+    height: 100vh;
+
+    overflow: hidden;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff,
+            #f4f6f4,
+            #e7ece8
+        );
+
+    transition: opacity 0.6s ease;
+}
+
+
+/* Decorative leaves */
+
+.leaf {
+    position: absolute;
+
+    width: 210px;
+    height: 165px;
+
+    opacity: 0.07;
+
+    background: #1d6545;
+
+    border-radius:
+        70% 30% 65% 35%
+        / 55% 45% 55% 45%;
+}
+
+.leaf::before {
+    content: "";
+
+    position: absolute;
+
+    width: 4px;
+    height: 155px;
+
+    left: 50%;
+    top: 5px;
+
+    background: #315d49;
+
+    transform: rotate(-20deg);
+}
+
+.leaf-one {
+    top: 5%;
+    left: 4%;
+    transform: rotate(25deg);
+}
+
+.leaf-two {
+    top: 10%;
+    right: -45px;
+    transform: rotate(110deg);
+}
+
+.leaf-three {
+    bottom: 5%;
+    left: 12%;
+    transform: rotate(170deg);
+}
+
+.leaf-four {
+    bottom: 10%;
+    right: 8%;
+    transform: rotate(220deg);
+}
+
+
+/* Opening text */
+
+.welcome-bottom {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    text-align: center;
+
+    z-index: 10;
+}
+
+.welcome-bottom h1 {
+    font-family: "Times New Roman", Times, serif;
+
+    font-size: clamp(55px, 9vw, 110px);
+
+    font-weight: 700;
+
+    letter-spacing: 7px;
+
+    color: #173f2d;
+
+    margin-bottom: 8px;
+}
+
+.creator {
+    font-family: "Times New Roman", Times, serif;
+
+    font-size: 10px;
+
+    color: #1769aa;
+
+    margin-bottom: 12px;
+}
+
+.continue {
+    font-family: "Times New Roman", Times, serif;
+
+    font-size: 14px;
+
+    color: #42604f;
+
+    animation: continuePulse 2s infinite;
+}
+
+@keyframes continuePulse {
+
+    0% {
+        opacity: 0.35;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.35;
+    }
+}
+
+
+/* =========================================================
+   SUBJECT PAGE
+========================================================= */
+
+.subject-screen {
+    min-height: 100vh;
+
+    padding: 35px;
+
+    background: #ffffff;
+}
+
+.home-header {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding-bottom: 30px;
+
+    border-bottom: 1px solid #e2e6e3;
+}
+
+.home-header h1 {
+    font-family: "Times New Roman", Times, serif;
+
+    color: #1d5c3d;
+
+    font-size: 38px;
+}
+
+.home-header p {
+    margin-top: 5px;
+
+    color: #77817b;
+
+    font-size: 14px;
+}
+
+
+/* Theme button */
+
+.theme-button {
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+
+    border: 1px solid #d8ded9;
+
+    background: #ffffff;
+
+    cursor: pointer;
+
+    font-size: 19px;
+}
+
+
+/* Subject cards */
+
+.subjects-container {
+    max-width: 1200px;
+
+    margin: 60px auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(280px, 1fr));
+
+    gap: 25px;
+}
+
+.subject-card {
+    position: relative;
+
+    min-height: 190px;
+
+    padding: 35px;
+
+    text-decoration: none;
+
+    color: inherit;
+
+    background: #fafbfa;
+
+    border: 1px solid #e0e5e1;
+
+    border-radius: 16px;
+
+    transition: 0.3s ease;
+}
+
+.subject-card:hover {
+    transform: translateY(-5px);
+
+    border-color: #4d805f;
+
+    box-shadow:
+        0 15px 35px rgba(31, 65, 47, 0.10);
+}
+
+.card-number {
+    font-family: "Times New Roman", Times, serif;
+
+    color: #7e8c83;
+
+    font-size: 14px;
+}
+
+.subject-card h2 {
+    margin-top: 22px;
+
+    color: #1e5b3d;
+
+    font-size: 25px;
+}
+
+.subject-card p {
+    margin-top: 10px;
+
+    color: #77827b;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   UNIT 1 STUDY PAGE
+========================================================= */
+
+.study-page {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+
+    background: #ffffff;
+}
+
+
+/* =========================================================
+   LEFT SIDEBAR
+========================================================= */
+
+.study-sidebar {
+    width: 270px;
+
+    height: 100vh;
+
+    flex-shrink: 0;
+
+    overflow-y: auto;
+
+    background: #f7f9f7;
+
+    border-right: 1px solid #dfe5e1;
+
+    padding: 20px 12px;
+}
+
+
+/* Sidebar title */
+
+.sidebar-brand {
+    padding: 10px 15px 22px;
+
+    border-bottom: 1px solid #dfe5e1;
+
+    margin-bottom: 20px;
+}
+
+.sidebar-brand h1 {
+    font-family: "Times New Roman", Times, serif;
+
+    font-size: 30px;
+
+    color: #205b3d;
+}
+
+.sidebar-brand p {
+    margin-top: 6px;
+
+    font-size: 12px;
+
+    color: #7a857e;
+}
+
+
+/* Unit heading */
+
+.sidebar-heading {
+    padding: 0 15px;
+
+    margin-bottom: 8px;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    color: #89938d;
+}
+
+
+/* =========================================================
+   TOPIC LINKS
+========================================================= */
+
+.topic-link {
+    display: block;
+
+    width: 100%;
+
+    padding: 10px 15px;
+
+    margin: 3px 0;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    color: #46534c;
+
+    font-size: 14px;
+
+    line-height: 1.4;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+
+/* Hover */
+
+.topic-link:hover {
+    background: #e5ece7;
+
+    color: #185936;
+}
+
+
+/* =========================================================
+   MAIN READING AREA
+========================================================= */
+
+.study-main {
+    flex: 1;
+
+    min-width: 0;
+
+    height: 100vh;
+
+    overflow-y: auto;
+
+    background: #ffffff;
+}
+
+
+/* =========================================================
+   TOP BAR
+========================================================= */
+
+.study-topbar {
+    position: sticky;
+
+    top: 0;
+
+    z-index: 50;
+
+    height: 65px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 40px;
+
+    background: rgba(255,255,255,0.96);
+
+    backdrop-filter: blur(10px);
+
+    border-bottom: 1px solid #e7ebe8;
+}
+
+.back-button {
+    text-decoration: none;
+
+    color: #42604f;
+
+    font-size: 14px;
+}
+
+.back-button:hover {
+    color: #185936;
+}
+
+
+/* =========================================================
+   UNIT HOME
+========================================================= */
+
+.unit-home {
+    width: 100%;
+
+    max-width: 950px;
+
+    margin: 0 auto;
+
+    padding: 60px 55px 100px;
+}
+
+.unit-home h1 {
+    font-family: "Times New Roman", Times, serif;
+
+    font-size: 48px;
+
+    color: #205b3d;
+
+    margin-bottom: 8px;
+}
+
+.unit-home > p {
+    font-size: 17px;
+
+    color: #66736b;
+
+    margin-bottom: 35px;
+}
+
+
+/* Welcome box */
+
+.unit-welcome-box {
+    padding: 28px;
+
+    border: 1px solid #e0e7e2;
+
+    border-left: 5px solid #397354;
+
+    border-radius: 10px;
+
+    background: #f5f8f6;
+}
+
+.unit-welcome-box h2 {
+    font-family: "Times New Roman", Times, serif;
+
+    font-size: 28px;
+
+    color: #285d42;
+
+    margin-bottom: 10px;
+}
+
+.unit-welcome-box p {
+    font-size: 16px;
+
+    line-height: 1.7;
+
+    color: #4d5a52;
+}
+
+
+/* =========================================================
+   NOTES
+========================================================= */
+
+.notes-container {
+    max-width: 900px;
+
+    margin: auto;
+
+    padding: 55px;
+}
+
+.notes-container h1 {
+    font-family: "Times New Roman", Times, serif;
+
+    font-size: 44px;
+
+    color: #205b3d;
+
+    margin-bottom: 20px;
+}
+
+.notes-container h2 {
+    color: #285d42;
+
+    font-size: 26px;
+
+    margin-top: 35px;
+
+    margin-bottom: 12px;
+}
+
+.notes-container h3 {
+    color: #3f6651;
+
+    font-size: 20px;
+
+    margin-top: 25px;
+
+    margin-bottom: 10px;
+}
+
+.notes-container p {
+    color: #3e4943;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    margin-bottom: 15px;
+}
+
+.notes-container ul {
+    margin: 10px 0 20px 25px;
+}
+
+.notes-container li {
+    color: #3e4943;
+
+    line-height: 1.8;
+
+    margin-bottom: 5px;
+}
+
+.note-box {
+    padding: 20px;
+
+    margin-top: 25px;
+
+    border-left: 4px solid #397354;
+
+    background: #f3f7f4;
+
+    border-radius: 6px;
+}
+
+
+/* =========================================================
+   SCROLLBARS
+========================================================= */
+
+.study-sidebar::-webkit-scrollbar,
+.study-main::-webkit-scrollbar {
+    width: 7px;
+}
+
+.study-sidebar::-webkit-scrollbar-track,
+.study-main::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.study-sidebar::-webkit-scrollbar-thumb,
+.study-main::-webkit-scrollbar-thumb {
+    background: #b7c1ba;
+
+    border-radius: 10px;
+}
+
+
+/* =========================================================
+   DARK MODE
+========================================================= */
+
+body.dark-mode {
+    background: #151b18;
+
+    color: #edf2ee;
+}
+
+body.dark-mode .study-page {
+    background: #171d1a;
+}
+
+body.dark-mode .study-sidebar {
+    background: #202923;
+
+    border-color: #3b4941;
+}
+
+body.dark-mode .sidebar-brand {
+    border-color: #3b4941;
+}
+
+body.dark-mode .sidebar-brand h1 {
+    color: #b7d8c2;
+}
+
+body.dark-mode .sidebar-brand p {
+    color: #9da9a2;
+}
+
+body.dark-mode .sidebar-heading {
+    color: #8f9b94;
+}
+
+
+/* Dark topic links */
+
+body.dark-mode .topic-link {
+    color: #c0c9c4;
+}
+
+body.dark-mode .topic-link:hover {
+    background: #344139;
+
+    color: #c0e0ca;
+}
+
+
+/* Dark reading area */
+
+body.dark-mode .study-main {
+    background:
+        linear-gradient(
+            135deg,
+            #171d1a,
+            #202a24
+        );
+}
+
+body.dark-mode .study-topbar {
+    background: rgba(25,31,28,0.96);
+
+    border-color: #3b4941;
+}
+
+body.dark-mode .back-button {
+    color: #b9d6c3;
+}
+
+body.dark-mode .unit-home h1 {
+    color: #c0dfca;
+}
+
+body.dark-mode .unit-home > p {
+    color: #adb7b1;
+}
+
+body.dark-mode .unit-welcome-box {
+    background: #2b3831;
+
+    border-color: #46564d;
+
+    border-left-color: #609375;
+}
+
+body.dark-mode .unit-welcome-box h2 {
+    color: #b3d5bd;
+}
+
+body.dark-mode .unit-welcome-box p {
+    color: #d0d7d3;
+}
+
+body.dark-mode .notes-container h1 {
+    color: #c0dfca;
+}
+
+body.dark-mode .notes-container h2 {
+    color: #b3d5bd;
+}
+
+body.dark-mode .notes-container h3 {
+    color: #a9cbb4;
+}
+
+body.dark-mode .notes-container p,
+body.dark-mode .notes-container li {
+    color: #d0d7d3;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 750px) {
+
+    .subjects-container {
+        grid-template-columns: 1fr;
+    }
+
+    .study-sidebar {
+        width: 220px;
+    }
+
+    .sidebar-brand h1 {
+        font-size: 25px;
+    }
+
+    .study-topbar {
+        padding: 0 20px;
+    }
+
+    .unit-home {
+        padding: 40px 25px 80px;
+    }
+
+    .unit-home h1 {
+        font-size: 38px;
+    }
+
+    .notes-container {
+        padding: 40px 25px 80px;
+    }
+
+    .welcome-bottom h1 {
+        font-size: 48px;
+
+        letter-spacing: 4px;
+    }
+}

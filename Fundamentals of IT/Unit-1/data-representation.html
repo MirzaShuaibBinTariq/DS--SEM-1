@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Data Representation | PENCIL BEATS</title>
+
+    <link
+        rel="stylesheet"
+        href="../../css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<div class="study-page">
+
+
+    <!-- =========================================
+         LEFT SIDEBAR
+    ========================================== -->
+
+    <aside class="study-sidebar">
+
+
+        <div class="sidebar-brand">
+
+            <h1>PENCIL BEATS</h1>
+
+            <p>Fundamentals of IT</p>
+
+        </div>
+
+
+        <div class="sidebar-heading">
+            UNIT 1
+        </div>
+
+
+        <a href="computer-hardware.html" class="topic-link">
+            Computer Hardware
+        </a>
+
+        <a href="input-devices.html" class="topic-link">
+            Input Devices
+        </a>
+
+        <a href="output-devices.html" class="topic-link">
+            Output Devices
+        </a>
+
+        <a href="speakers.html" class="topic-link">
+            Speakers
+        </a>
+
+        <a href="data-types.html" class="topic-link">
+            Data and Its Types
+        </a>
+
+        <a href="computer-model.html" class="topic-link">
+            Simple Model of a Computer
+        </a>
+
+        <a href="memory.html" class="topic-link">
+            Memory
+        </a>
+
+        <a
+            href="data-representation.html"
+            class="topic-link active"
+        >
+            Data Representation
+        </a>
+
+        <a href="number-systems.html" class="topic-link">
+            Number Systems
+        </a>
+
+        <a href="integer-representation.html" class="topic-link">
+            Integer Representation
+        </a>
+
+        <a href="character-representation.html" class="topic-link">
+            Character Representation
+        </a>
+
+        <a href="floating-point.html" class="topic-link">
+            Floating Point
+        </a>
+
+        <a href="html-css-programming.html" class="topic-link">
+            HTML, CSS & Programming
+        </a>
+
+
+    </aside>
+
+
+
+    <!-- =========================================
+         MAIN CONTENT
+    ========================================== -->
+
+    <main class="study-main">
+
+
+        <header class="study-topbar">
+
+            <a
+                href="index.html"
+                class="back-button"
+            >
+                ← Unit 1
+            </a>
+
+
+            <button
+                class="mode-button"
+                onclick="toggleTheme()"
+                id="themeButton"
+            >
+                🌙 Theme
+            </button>
+
+        </header>
+
+
+
+        <article class="notes-container">
+
+
+            <!-- TITLE -->
+
+            <h1>
+                Data Representation
+            </h1>
+
+
+            <p>
+                <strong>Data representation</strong> means the way
+                data is represented or stored inside a computer so
+                that the computer can process it.
+            </p>
+
+
+            <p>
+                A computer works electronically, so it represents
+                information using signals that can be understood by
+                its electronic circuits.
+            </p>
+
+
+            <div class="note-box">
+
+                <p>
+                    <strong>Basic Idea:</strong>
+                </p>
+
+                <p>
+                    The computer represents data using two basic
+                    states: <strong>0</strong> and
+                    <strong>1</strong>.
+                </p>
+
+            </div>
+
+
+
+            <!-- =================================
+                 BINARY REPRESENTATION
+            ================================== -->
+
+            <h2>
+                Binary Representation
+            </h2>
+
+
+            <p>
+                Computers use the
+                <strong>binary system</strong> to represent data.
+            </p>
+
+
+            <p>
+                Binary has only two possible values:
+            </p>
+
+
+            <div class="note-box">
+
+                <p
+                    style="
+                        text-align:center;
+                        font-size:28px;
+                    "
+                >
+
+                    <strong>0 &nbsp;&nbsp;&nbsp; 1</strong>
+
+                </p>
+
+            </div>
+
+
+            <p>
+                These two values can represent two different
+                electronic states in a computer.
+            </p>
+
+
+
+            <!-- =================================
+                 0
+            ================================== -->
+
+            <h2>
+                Meaning of 0
+            </h2>
+
+
+            <p>
+                In a simple representation, <strong>0</strong> can
+                represent the absence of a signal or an electrical
+                signal being in the low/off state.
+            </p>
+
+
+            <div class="note-box">
+
+                <p
+                    style="
+                        text-align:center;
+                        font-size:22px;
+                    "
+                >
+
+                    <strong>0 = No signal / Low state</strong>
+
+                </p>
+
+            </div>
+
+
+
+            <!-- =================================
+                 1
+            ================================== -->
+
+            <h2>
+                Meaning of 1
+            </h2>
+
+
+            <p>
+                In a simple representation, <strong>1</strong> can
+                represent the presence of a signal or an electrical
+                signal being in the high/on state.
+            </p>
+
+
+            <div class="note-box">
+
+                <p
+                    style="
+                        text-align:center;
+                        font-size:22px;
+                    "
+                >
+
+                    <strong>1 = Signal / High state</strong>
+
+                </p>
+
+            </div>
+
+
+
+            <!-- =================================
+                 WHY 0 AND 1
+            ================================== -->
+
+            <h2>
+                Why Do Computers Use 0 and 1?
+            </h2>
+
+
+            <p>
+                Computer hardware is made from electronic circuits.
+                These circuits can reliably distinguish between
+                two different states.
+            </p>
+
+
+            <p>
+                Using two states makes it easier for the computer to
+                store, process and transmit information electronically.
+            </p>
+
+
+            <p>
+                Therefore, complex information such as numbers,
+                characters, text, images and other forms of data can
+                ultimately be represented using combinations of
+                <strong>0s and 1s</strong>.
+            </p>
+
+
+
+            <!-- =================================
+                 BITS
+            ================================== -->
+
+            <h2>
+                Bit
+            </h2>
+
+
+            <p>
+                A <strong>bit</strong> is the smallest unit of data
+                used by a computer.
+            </p>
+
+
+            <p>
+                The word bit comes from
+                <strong>binary digit</strong>.
+            </p>
+
+
+            <p>
+                A bit can have only one of two values:
+            </p>
+
+
+            <div class="note-box">
+
+                <p
+                    style="
+                        text-align:center;
+                        font-size:24px;
+                    "
+                >
+
+                    <strong>0 or 1</strong>
+
+                </p>
+
+            </div>
+
+
+
+            <!-- =================================
+                 BINARY EXAMPLE
+            ================================== -->
+
+            <h2>
+                Example of Binary Data
+            </h2>
+
+
+            <p>
+                A sequence of bits can contain more than one binary
+                value.
+            </p>
+
+
+            <p>
+                For example:
+            </p>
+
+
+            <div class="note-box">
+
+                <p
+                    style="
+                        text-align:center;
+                        font-size:26px;
+                        letter-spacing:5px;
+                    "
+                >
+
+                    <strong>10110101</strong>
+
+                </p>
+
+            </div>
+
+
+            <p>
+                Each position contains either 0 or 1. A computer
+                can use such combinations to represent different
+                forms of information.
+            </p>
+
+
+
+            <!-- =================================
+                 DATA PROCESSING
+            ================================== -->
+
+            <h2>
+                Data Representation and Processing
+            </h2>
+
+
+            <p>
+                When data is represented in a form that the
+                computer's electronic circuits can process, the
+                computer can perform operations on that data.
+            </p>
+
+
+            <p>
+                Data is therefore converted into a suitable internal
+                representation before it is processed by the
+                computer.
+            </p>
+
+
+            <div class="note-box">
+
+                <p
+                    style="
+                        text-align:center;
+                        font-size:20px;
+                        line-height:2;
+                    "
+                >
+
+                    <strong>Data</strong>
+                    → 
+                    <strong>Binary Representation</strong>
+                    →
+                    <strong>Processing</strong>
+
+                </p>
+
+            </div>
+
+
+
+            <!-- =================================
+                 IMPORTANCE
+            ================================== -->
+
+            <h2>
+                Importance of Data Representation
+            </h2>
+
+
+            <p>
+                Data representation is important because computers
+                need data in a form that their electronic systems
+                can understand and process.
+            </p>
+
+
+            <p>
+                A suitable representation helps the computer handle
+                data efficiently and perform processing operations
+                quickly.
+            </p>
+
+
+            <p>
+                Therefore, data representation is closely related to
+                the <strong>speed and efficiency of computer
+                processing</strong>.
+            </p>
+
+
+
+            <!-- =================================
+                 DIFFERENT DATA
+            ================================== -->
+
+            <h2>
+                Representation of Different Types of Data
+            </h2>
+
+
+            <p>
+                Computers need to represent different kinds of
+                information, including:
+            </p>
+
+
+            <ul>
+
+                <li>
+                    Numbers
+                </li>
+
+                <li>
+                    Characters
+                </li>
+
+                <li>
+                    Text
+                </li>
+
+                <li>
+                    Images
+                </li>
+
+                <li>
+                    Audio
+                </li>
+
+            </ul>
+
+
+            <p>
+                These forms of information are represented internally
+                using binary data so that the computer can store and
+                process them.
+            </p>
+
+
+
+            <!-- =================================
+                 QUICK REVISION
+            ================================== -->
+
+            <h2>
+                Quick Revision
+            </h2>
+
+
+            <ul>
+
+                <li>
+                    Data representation is the way data is
+                    represented and stored inside a computer.
+                </li>
+
+                <li>
+                    Computers use binary representation.
+                </li>
+
+                <li>
+                    Binary uses only <strong>0 and 1</strong>.
+                </li>
+
+                <li>
+                    0 can represent a low/off or no-signal state.
+                </li>
+
+                <li>
+                    1 can represent a high/on or signal state.
+                </li>
+
+                <li>
+                    A bit is a binary digit and can have a value of
+                    0 or 1.
+                </li>
+
+                <li>
+                    Different types of information can ultimately be
+                    represented using combinations of 0s and 1s.
+                </li>
+
+                <li>
+                    Data representation allows computers to store
+                    and process information efficiently.
+                </li>
+
+            </ul>
+
+
+        </article>
+
+
+    </main>
+
+
+</div>
+
+
+
+<script>
+
+function toggleTheme() {
+
+    document.body.classList.toggle("dark-mode");
+
+    const button =
+        document.getElementById("themeButton");
+
+
+    if (
+        document.body.classList.contains("dark-mode")
+    ) {
+
+        button.textContent = "☀ Light";
+
+    } else {
+
+        button.textContent = "🌙 Theme";
+
+    }
+
+}
+
+</script>
+
+
+</body>
+
+</html>

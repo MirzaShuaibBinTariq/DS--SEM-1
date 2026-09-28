@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fundamentals of IT | PENCIL BEATS</title>
+
+    <style>
+        /* =========================================================
+           RESET
+        ========================================================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+            font-family: Georgia, "Times New Roman", serif;
+            background: #f5f7f5;
+            color: #202620;
+            min-height: 100vh;
+            transition:
+                background-color 0.3s ease,
+                color 0.3s ease;
+        }
+
+
+        /* =========================================================
+           TOP NAVIGATION BAR
+        ========================================================= */
+
+        .top-bar {
+            width: 100%;
+            height: 68px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 32px;
+
+            background: rgba(255, 255, 255, 0.96);
+
+            border-bottom: 1px solid #d9dfda;
+
+            position: sticky;
+            top: 0;
+            z-index: 100;
+
+            transition:
+                background-color 0.3s ease,
+                border-color 0.3s ease;
+        }
+
+
+        /* =========================================================
+           BACK TO SUBJECTS BUTTON
+        ========================================================= */
+
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+
+            text-decoration: none;
+
+            color: #285c3b;
+
+            font-size: 17px;
+            font-weight: 600;
+
+            padding: 8px 0;
+
+            transition:
+                color 0.2s ease,
+                transform 0.2s ease;
+        }
+
+
+        .back-button:hover {
+            color: #173d26;
+            transform: translateX(-3px);
+        }
+
+
+        /* =========================================================
+           THEME BUTTON
+        ========================================================= */
+
+        .theme-button {
+            border: none;
+            outline: none;
+
+            background: #285c3b;
+            color: #ffffff;
+
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 14px;
+            font-weight: 600;
+
+            padding: 10px 17px;
+
+            border-radius: 22px;
+
+            cursor: pointer;
+
+            transition:
+                background-color 0.2s ease,
+                transform 0.2s ease;
+        }
+
+
+        .theme-button:hover {
+            background: #1d4b2e;
+            transform: translateY(-1px);
+        }
+
+
+        /* =========================================================
+           MAIN PAGE
+        ========================================================= */
+
+        .page {
+            width: 100%;
+            min-height: calc(100vh - 68px);
+
+            padding: 54px 30px 80px;
+        }
+
+
+        .content {
+            width: 100%;
+            max-width: 1080px;
+
+            margin: 0 auto;
+        }
+
+
+        /* =========================================================
+           PAGE HEADING
+        ========================================================= */
+
+        .page-heading {
+            text-align: center;
+
+            margin-bottom: 48px;
+        }
+
+
+        .page-heading h1 {
+            font-size: 44px;
+            line-height: 1.15;
+
+            color: #285c3b;
+
+            margin-bottom: 10px;
+
+            font-weight: 700;
+        }
+
+
+        .page-heading p {
+            font-size: 17px;
+            line-height: 1.5;
+
+            color: #626a64;
+        }
+
+
+        /* =========================================================
+           UNITS GRID
+        ========================================================= */
+
+        .units-grid {
+            width: 100%;
+
+            display: grid;
+
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+
+            gap: 30px;
+        }
+
+
+        /* =========================================================
+           UNIT CARD
+        ========================================================= */
+
+        .unit-card {
+            min-height: 215px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-decoration: none;
+
+            background: #ffffff;
+
+            border: 1px solid #d7ded8;
+
+            border-radius: 18px;
+
+            box-shadow:
+                0 6px 20px rgba(30, 50, 35, 0.07);
+
+            position: relative;
+            overflow: hidden;
+
+            transition:
+                transform 0.25s ease,
+                box-shadow 0.25s ease,
+                border-color 0.25s ease,
+                background-color 0.3s ease;
+        }
+
+
+        /* Small green accent at the top of every card */
+        .unit-card::before {
+            content: "";
+
+            position: absolute;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 4px;
+
+            background: #285c3b;
+
+            transform: scaleX(0);
+
+            transform-origin: left;
+
+            transition: transform 0.25s ease;
+        }
+
+
+        .unit-card:hover {
+            transform: translateY(-6px);
+
+            border-color: #8aa995;
+
+            box-shadow:
+                0 12px 28px rgba(30, 50, 35, 0.12);
+        }
+
+
+        .unit-card:hover::before {
+            transform: scaleX(1);
+        }
+
+
+        /* =========================================================
+           UNIT TEXT
+        ========================================================= */
+
+        .unit-title {
+            font-size: 30px;
+
+            color: #285c3b;
+
+            font-weight: 600;
+
+            text-align: center;
+
+            transition: color 0.3s ease;
+        }
+
+
+        /* =========================================================
+           UNIT 1 SPECIAL STATE
+           Unit 1 is available, so it does not show Coming Soon.
+        ========================================================= */
+
+        .unit-one {
+            cursor: pointer;
+        }
+
+
+        /* =========================================================
+           COMING SOON UNITS
+           Unit 2, 3 and 4 still link to the existing
+           Subjects/coming-soon.html file.
+        ========================================================= */
+
+        .coming-soon-unit {
+            cursor: pointer;
+        }
+
+
+        /* =========================================================
+           FOOTER AREA
+        ========================================================= */
+
+        .page-footer {
+            text-align: center;
+
+            margin-top: 55px;
+
+            color: #7a817c;
+
+            font-size: 14px;
+        }
+
+
+        /* =========================================================
+           DARK MODE
+        ========================================================= */
+
+        body.dark {
+            background: #202522;
+            color: #eeeeee;
+        }
+
+
+        body.dark .top-bar {
+            background: #292e2b;
+            border-bottom-color: #444c47;
+        }
+
+
+        body.dark .back-button {
+            color: #a8d0b0;
+        }
+
+
+        body.dark .back-button:hover {
+            color: #c3e0c9;
+        }
+
+
+        body.dark .theme-button {
+            background: #53635a;
+            color: #ffffff;
+        }
+
+
+        body.dark .theme-button:hover {
+            background: #64766a;
+        }
+
+
+        body.dark .page-heading h1 {
+            color: #a8d0b0;
+        }
+
+
+        body.dark .page-heading p {
+            color: #b9c0bb;
+        }
+
+
+        body.dark .unit-card {
+            background: #2b312e;
+
+            border-color: #47504a;
+
+            box-shadow:
+                0 8px 25px rgba(0, 0, 0, 0.22);
+        }
+
+
+        body.dark .unit-card:hover {
+            border-color: #708878;
+
+            box-shadow:
+                0 12px 30px rgba(0, 0, 0, 0.30);
+        }
+
+
+        body.dark .unit-card::before {
+            background: #8fbd99;
+        }
+
+
+        body.dark .unit-title {
+            color: #a8d0af;
+        }
+
+
+        body.dark .page-footer {
+            color: #9da59f;
+        }
+
+
+        /* =========================================================
+           TABLET
+        ========================================================= */
+
+        @media (max-width: 850px) {
+
+            .page {
+                padding: 45px 24px 65px;
+            }
+
+
+            .content {
+                max-width: 720px;
+            }
+
+
+            .page-heading h1 {
+                font-size: 39px;
+            }
+
+
+            .units-grid {
+                gap: 22px;
+            }
+
+
+            .unit-card {
+                min-height: 190px;
+            }
+
+
+            .unit-title {
+                font-size: 27px;
+            }
+        }
+
+
+        /* =========================================================
+           MOBILE
+        ========================================================= */
+
+        @media (max-width: 650px) {
+
+            .top-bar {
+                height: 62px;
+
+                padding: 0 18px;
+            }
+
+
+            .back-button {
+                font-size: 15px;
+            }
+
+
+            .theme-button {
+                font-size: 13px;
+
+                padding: 8px 14px;
+            }
+
+
+            .page {
+                min-height: calc(100vh - 62px);
+
+                padding: 38px 17px 55px;
+            }
+
+
+            .page-heading {
+                margin-bottom: 34px;
+            }
+
+
+            .page-heading h1 {
+                font-size: 32px;
+
+                margin-bottom: 8px;
+            }
+
+
+            .page-heading p {
+                font-size: 15px;
+            }
+
+
+            .units-grid {
+                grid-template-columns: 1fr;
+
+                gap: 18px;
+            }
+
+
+            .unit-card {
+                min-height: 165px;
+
+                border-radius: 15px;
+            }
+
+
+            .unit-title {
+                font-size: 26px;
+            }
+
+
+            .page-footer {
+                margin-top: 40px;
+
+                font-size: 13px;
+            }
+        }
+
+
+        /* =========================================================
+           VERY SMALL MOBILE
+        ========================================================= */
+
+        @media (max-width: 400px) {
+
+            .top-bar {
+                padding: 0 14px;
+            }
+
+
+            .page {
+                padding-left: 13px;
+                padding-right: 13px;
+            }
+
+
+            .page-heading h1 {
+                font-size: 29px;
+            }
+
+
+            .unit-card {
+                min-height: 150px;
+            }
+
+
+            .unit-title {
+                font-size: 24px;
+            }
+        }
+
+
+        /* =========================================================
+           REDUCED MOTION
+        ========================================================= */
+
+        @media (prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+                scroll-behavior: auto !important;
+
+                transition-duration: 0.01ms !important;
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <!-- =========================================================
+         TOP BAR
+    ========================================================== -->
+
+    <header class="top-bar">
+
+        <a
+            href="../Index.html#subjects"
+            class="back-button"
+        >
+            ← Subjects
+        </a>
+
+
+        <button
+            type="button"
+            class="theme-button"
+            id="themeButton"
+            onclick="toggleTheme()"
+        >
+            🌙 Theme
+        </button>
+
+    </header>
+
+
+
+    <!-- =========================================================
+         MAIN CONTENT
+    ========================================================== -->
+
+    <main class="page">
+
+        <div class="content">
+
+
+            <!-- PAGE HEADING -->
+
+            <section class="page-heading">
+
+                <h1>
+                    Fundamentals of IT
+                </h1>
+
+                <p>
+                    Select a unit to start studying
+                </p>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 UNIT CARDS
+            ================================================== -->
+
+            <section class="units-grid">
+
+
+                <!-- ================= UNIT 1 ================= -->
+
+                <a
+                    href="Unit-1/index.html"
+                    class="unit-card unit-one"
+                    aria-label="Open Unit 1"
+                >
+
+                    <span class="unit-title">
+                        Unit 1
+                    </span>
+
+                </a>
+
+
+
+                <!-- ================= UNIT 2 ================= -->
+
+                <a
+                    href="../Subjects/coming-soon.html"
+                    class="unit-card coming-soon-unit"
+                    aria-label="Unit 2 - Coming Soon"
+                >
+
+                    <span class="unit-title">
+                        Unit 2
+                    </span>
+
+                </a>
+
+
+
+                <!-- ================= UNIT 3 ================= -->
+
+                <a
+                    href="../Subjects/coming-soon.html"
+                    class="unit-card coming-soon-unit"
+                    aria-label="Unit 3 - Coming Soon"
+                >
+
+                    <span class="unit-title">
+                        Unit 3
+                    </span>
+
+                </a>
+
+
+
+                <!-- ================= UNIT 4 ================= -->
+
+                <a
+                    href="../Subjects/coming-soon.html"
+                    class="unit-card coming-soon-unit"
+                    aria-label="Unit 4 - Coming Soon"
+                >
+
+                    <span class="unit-title">
+                        Unit 4
+                    </span>
+
+                </a>
+
+            </section>
+
+
+
+            <!-- FOOTER -->
+
+            <div class="page-footer">
+                PENCIL BEATS
+            </div>
+
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =========================================================
+         JAVASCRIPT
+    ========================================================== -->
+
+    <script>
+
+        /*
+         * Theme handling
+         * Saves the selected theme in localStorage so that
+         * the choice remains when the user comes back.
+         */
+
+        function toggleTheme() {
+
+            document.body.classList.toggle("dark");
+
+            if (document.body.classList.contains("dark")) {
+
+                localStorage.setItem("pencil-beats-theme", "dark");
+
+            } else {
+
+                localStorage.setItem("pencil-beats-theme", "light");
+
+            }
+
+            updateThemeButton();
+        }
+
+
+
+        /*
+         * Changes the button text depending on the current theme.
+         */
+
+        function updateThemeButton() {
+
+            const themeButton =
+                document.getElementById("themeButton");
+
+
+            if (document.body.classList.contains("dark")) {
+
+                themeButton.textContent = "☀️ Theme";
+
+            } else {
+
+                themeButton.textContent = "🌙 Theme";
+
+            }
+        }
+
+
+
+        /*
+         * Load previously selected theme.
+         */
+
+        function loadSavedTheme() {
+
+            const savedTheme =
+                localStorage.getItem("pencil-beats-theme");
+
+
+            if (savedTheme === "dark") {
+
+                document.body.classList.add("dark");
+
+            } else {
+
+                document.body.classList.remove("dark");
+
+            }
+
+
+            updateThemeButton();
+        }
+
+
+
+        /*
+         * Run when the page loads.
+         */
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            loadSavedTheme
+        );
+
+    </script>
+
+</body>
+</html>

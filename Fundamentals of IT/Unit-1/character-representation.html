@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Character Representation | PENCIL BEATS</title>
+
+    <link
+        rel="stylesheet"
+        href="../../css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<div class="study-page">
+
+
+    <!-- LEFT SIDEBAR -->
+
+    <aside class="study-sidebar">
+
+
+        <div class="sidebar-brand">
+
+            <h1>PENCIL BEATS</h1>
+
+            <p>Fundamentals of IT</p>
+
+        </div>
+
+
+        <div class="sidebar-heading">
+            UNIT 1
+        </div>
+
+
+        <a href="computer-hardware.html" class="topic-link">
+            Computer Hardware
+        </a>
+
+        <a href="input-devices.html" class="topic-link">
+            Input Devices
+        </a>
+
+        <a href="output-devices.html" class="topic-link">
+            Output Devices
+        </a>
+
+        <a href="speakers.html" class="topic-link">
+            Speakers
+        </a>
+
+        <a href="data-types.html" class="topic-link">
+            Data and Its Types
+        </a>
+
+        <a href="computer-model.html" class="topic-link">
+            Simple Model of a Computer
+        </a>
+
+        <a href="memory.html" class="topic-link">
+            Memory
+        </a>
+
+        <a href="data-representation.html" class="topic-link">
+            Data Representation
+        </a>
+
+        <a href="number-systems.html" class="topic-link">
+            Number Systems
+        </a>
+
+        <a href="integer-representation.html" class="topic-link">
+            Integer Representation
+        </a>
+
+        <a
+            href="character-representation.html"
+            class="topic-link active"
+        >
+            Character Representation
+        </a>
+
+        <a href="floating-point.html" class="topic-link">
+            Floating Point
+        </a>
+
+        <a href="html-css-programming.html" class="topic-link">
+            HTML, CSS & Programming
+        </a>
+
+
+    </aside>
+
+
+
+    <!-- MAIN CONTENT -->
+
+    <main class="study-main">
+
+
+        <header class="study-topbar">
+
+            <a
+                href="index.html"
+                class="back-button"
+            >
+                ← Unit 1
+            </a>
+
+
+            <button
+                class="mode-button"
+                onclick="toggleTheme()"
+                id="themeButton"
+            >
+                🌙 Theme
+            </button>
+
+        </header>
+
+
+
+        <article class="notes-container">
+
+
+            <!-- TITLE -->
+
+            <h1>
+                Character Representation
+            </h1>
+
+
+            <p>
+                Computers need to represent characters such as
+                letters, numbers, symbols and special characters in
+                a form that they can store and process.
+            </p>
+
+
+            <p>
+                Since computers work internally with binary data,
+                characters are represented using numerical codes.
+            </p>
+
+
+            <div class="note-box">
+
+                <p>
+                    <strong>Basic Idea:</strong>
+                </p>
+
+                <p>
+                    A character is assigned a numerical code, and
+                    the computer uses that code to represent and
+                    process the character.
+                </p>
+
+            </div>
+
+
+
+            <!-- ASCII -->
+
+            <h2>
+                ASCII
+            </h2>
+
+
+            <p>
+                <strong>ASCII</strong> stands for
+                <strong>American Standard Code for Information
+                Interchange</strong>.
+            </p>
+
+
+            <p>
+                ASCII is a character encoding system used to
+                represent characters in computers.
+            </p>
+
+
+            <p>
+                It provides numerical codes for characters such as
+                letters, digits and commonly used symbols.
+            </p>
+
+
+            <h3>
+                Basic ASCII
+            </h3>
+
+
+            <p>
+                Standard ASCII uses
+                <strong>7 bits</strong> to represent a character.
+            </p>
+
+
+            <p>
+                With 7 bits, a total of
+                <strong>128 different codes</strong> can be
+                represented.
+            </p>
+
+
+            <p>
+                These codes are used for characters such as:
+            </p>
+
+
+            <ul>
+
+                <li>
+                    Uppercase letters
+                </li>
+
+                <li>
+                    Lowercase letters
+                </li>
+
+                <li>
+                    Digits
+                </li>
+
+                <li>
+                    Punctuation marks
+                </li>
+
+                <li>
+                    Control characters
+                </li>
+
+            </ul>
+
+
+            <h3>
+                Example
+            </h3>
+
+
+            <p>
+                The character <strong>A</strong> has an ASCII
+                numerical code.
+            </p>
+
+
+            <p>
+                The important idea is that the computer does not
+                store the letter as a physical letter. It stores
+                its corresponding code.
+            </p>
+
+
+
+            <!-- EXTENDED ASCII -->
+
+            <h2>
+                Extended ASCII
+            </h2>
+
+
+            <p>
+                <strong>Extended ASCII</strong> uses
+                <strong>8 bits</strong> and provides more possible
+                character codes than standard 7-bit ASCII.
+            </p>
+
+
+            <p>
+                With 8 bits, up to
+                <strong>256 different values</strong> can be
+                represented.
+            </p>
+
+
+            <p>
+                The additional codes can be used for extra
+                characters and symbols.
+            </p>
+
+
+            <div class="note-box">
+
+                <p>
+                    <strong>Remember:</strong>
+                </p>
+
+                <p>
+                    ASCII → 7 bits → 128 codes
+                </p>
+
+                <p>
+                    Extended ASCII → 8 bits → 256 possible values
+                </p>
+
+            </div>
+
+
+
+            <!-- UNICODE -->
+
+            <h2>
+                Unicode
+            </h2>
+
+
+            <p>
+                <strong>Unicode</strong> is a character encoding
+                standard designed to represent a very large range
+                of characters from different writing systems.
+            </p>
+
+
+            <p>
+                Unlike basic ASCII, Unicode is not limited to only
+                common English characters.
+            </p>
+
+
+            <p>
+                It can represent characters from many different
+                languages and writing systems.
+            </p>
+
+
+            <p>
+                This makes Unicode suitable for modern computer
+                systems where information may need to be written in
+                different languages.
+            </p>
+
+
+            <h3>
+                Examples of Characters Represented by Unicode
+            </h3>
+
+
+            <ul>
+
+                <li>
+                    English characters
+                </li>
+
+                <li>
+                    Arabic characters
+                </li>
+
+                <li>
+                    Hindi characters
+                </li>
+
+                <li>
+                    Chinese characters
+                </li>
+
+                <li>
+                    Mathematical symbols
+                </li>
+
+                <li>
+                    Many other symbols and writing systems
+                </li>
+
+            </ul>
+
+
+
+            <!-- WHY UNICODE -->
+
+            <h2>
+                Why is Unicode Important?
+            </h2>
+
+
+            <p>
+                ASCII mainly focuses on a limited set of commonly
+                used characters, while computers today need to
+                handle text from many languages.
+            </p>
+
+
+            <p>
+                Unicode provides a common way to represent a very
+                large collection of characters.
+            </p>
+
+
+            <p>
+                Therefore, Unicode helps computers store, process
+                and display multilingual text.
+            </p>
+
+
+
+            <!-- COMPARISON -->
+
+            <h2>
+                ASCII vs Extended ASCII vs Unicode
+            </h2>
+
+
+            <table
+                style="
+                    width:100%;
+                    border-collapse:collapse;
+                    margin:25px 0;
+                "
+            >
+
+                <tr>
+
+                    <th style="border:1px solid #cfd8d2; padding:12px;">
+                        Feature
+                    </th>
+
+                    <th style="border:1px solid #cfd8d2; padding:12px;">
+                        ASCII
+                    </th>
+
+                    <th style="border:1px solid #cfd8d2; padding:12px;">
+                        Extended ASCII
+                    </th>
+
+                    <th style="border:1px solid #cfd8d2; padding:12px;">
+                        Unicode
+                    </th>
+
+                </tr>
+
+
+                <tr>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Bits
+                    </td>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        7 bits
+                    </td>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        8 bits
+                    </td>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Uses different encoding forms
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Number of codes
+                    </td>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        128
+                    </td>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        256 possible values
+                    </td>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Very large range of characters
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Main purpose
+                    </td>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Common characters
+                    </td>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        More characters and symbols
+                    </td>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Characters from many languages
+                    </td>
+
+                </tr>
+
+            </table>
+
+
+
+            <!-- SIMPLE EXPLANATION -->
+
+            <h2>
+                Simple Example
+            </h2>
+
+
+            <p>
+                Suppose you type the word:
+            </p>
+
+
+            <div class="note-box">
+
+                <p
+                    style="
+                        text-align:center;
+                        font-size:26px;
+                        letter-spacing:3px;
+                    "
+                >
+                    <strong>CAT</strong>
+                </p>
+
+            </div>
+
+
+            <p>
+                The computer does not simply store the letters
+                <strong>C</strong>, <strong>A</strong> and
+                <strong>T</strong> in the same way humans see them.
+            </p>
+
+
+            <p>
+                Each character is represented using its corresponding
+                character code, which can then be represented
+                internally using binary data.
+            </p>
+
+
+            <div class="note-box">
+
+                <p
+                    style="
+                        text-align:center;
+                        font-size:20px;
+                        line-height:2;
+                    "
+                >
+
+                    Character
+                    →
+                    Character Code
+                    →
+                    Binary Representation
+
+                </p>
+
+            </div>
+
+
+
+            <!-- QUICK REVISION -->
+
+            <h2>
+                Quick Revision
+            </h2>
+
+
+            <ul>
+
+                <li>
+                    Character representation allows computers to
+                    store and process characters.
+                </li>
+
+                <li>
+                    ASCII stands for American Standard Code for
+                    Information Interchange.
+                </li>
+
+                <li>
+                    Standard ASCII uses 7 bits and provides 128
+                    codes.
+                </li>
+
+                <li>
+                    Extended ASCII uses 8 bits and provides up to
+                    256 possible values.
+                </li>
+
+                <li>
+                    Unicode provides a way to represent a very large
+                    range of characters from different languages.
+                </li>
+
+                <li>
+                    Character codes can ultimately be represented
+                    internally using binary data.
+                </li>
+
+            </ul>
+
+
+        </article>
+
+
+    </main>
+
+
+</div>
+
+
+
+<script>
+
+function toggleTheme() {
+
+    document.body.classList.toggle("dark-mode");
+
+    const button =
+        document.getElementById("themeButton");
+
+
+    if (
+        document.body.classList.contains("dark-mode")
+    ) {
+
+        button.textContent = "☀ Light";
+
+    } else {
+
+        button.textContent = "🌙 Theme";
+
+    }
+
+}
+
+</script>
+
+
+</body>
+
+</html>

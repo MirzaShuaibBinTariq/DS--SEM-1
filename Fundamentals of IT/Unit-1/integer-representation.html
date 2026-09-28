@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Integer Representation | PENCIL BEATS</title>
+
+    <link
+        rel="stylesheet"
+        href="../../css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<div class="study-page">
+
+
+    <!-- =========================================
+         LEFT SIDEBAR
+    ========================================== -->
+
+    <aside class="study-sidebar">
+
+
+        <div class="sidebar-brand">
+
+            <h1>PENCIL BEATS</h1>
+
+            <p>Fundamentals of IT</p>
+
+        </div>
+
+
+        <div class="sidebar-heading">
+            UNIT 1
+        </div>
+
+
+        <a href="computer-hardware.html" class="topic-link">
+            Computer Hardware
+        </a>
+
+        <a href="input-devices.html" class="topic-link">
+            Input Devices
+        </a>
+
+        <a href="output-devices.html" class="topic-link">
+            Output Devices
+        </a>
+
+        <a href="speakers.html" class="topic-link">
+            Speakers
+        </a>
+
+        <a href="data-types.html" class="topic-link">
+            Data and Its Types
+        </a>
+
+        <a href="computer-model.html" class="topic-link">
+            Simple Model of a Computer
+        </a>
+
+        <a href="memory.html" class="topic-link">
+            Memory
+        </a>
+
+        <a href="data-representation.html" class="topic-link">
+            Data Representation
+        </a>
+
+        <a href="number-systems.html" class="topic-link">
+            Number Systems
+        </a>
+
+        <a
+            href="integer-representation.html"
+            class="topic-link active"
+        >
+            Integer Representation
+        </a>
+
+        <a href="character-representation.html" class="topic-link">
+            Character Representation
+        </a>
+
+        <a href="floating-point.html" class="topic-link">
+            Floating Point
+        </a>
+
+        <a href="html-css-programming.html" class="topic-link">
+            HTML, CSS & Programming
+        </a>
+
+
+    </aside>
+
+
+
+    <!-- =========================================
+         MAIN CONTENT
+    ========================================== -->
+
+    <main class="study-main">
+
+
+        <header class="study-topbar">
+
+            <a
+                href="index.html"
+                class="back-button"
+            >
+                ← Unit 1
+            </a>
+
+
+            <button
+                class="mode-button"
+                onclick="toggleTheme()"
+                id="themeButton"
+            >
+                🌙 Theme
+            </button>
+
+        </header>
+
+
+
+        <article class="notes-container">
+
+
+            <!-- =================================
+                 TITLE
+            ================================== -->
+
+            <h1>
+                Integer Representation
+            </h1>
+
+
+            <p>
+                Computers need a way to represent both
+                <strong>positive and negative integers</strong>.
+            </p>
+
+
+            <p>
+                Since computers work with binary digits, integers
+                are represented using combinations of
+                <strong>0s and 1s</strong>.
+            </p>
+
+
+            <p>
+                Different methods can be used to represent signed
+                integers.
+            </p>
+
+
+            <div class="note-box">
+
+                <p>
+                    The three important methods are:
+                </p>
+
+                <ol>
+
+                    <li>
+                        Sign and Magnitude
+                    </li>
+
+                    <li>
+                        One's Complement
+                    </li>
+
+                    <li>
+                        Two's Complement
+                    </li>
+
+                </ol>
+
+            </div>
+
+
+
+            <!-- =================================
+                 SIGN AND MAGNITUDE
+            ================================== -->
+
+            <h2>
+                Sign and Magnitude Representation
+            </h2>
+
+
+            <p>
+                In <strong>Sign and Magnitude</strong>
+                representation, one bit is used to represent the
+                sign of the number, while the remaining bits
+                represent its magnitude or numerical value.
+            </p>
+
+
+            <h3>
+                Sign Bit
+            </h3>
+
+
+            <p>
+                The first or most significant bit is used as the
+                <strong>sign bit</strong>.
+            </p>
+
+
+            <ul>
+
+                <li>
+                    <strong>0</strong> represents a positive number.
+                </li>
+
+                <li>
+                    <strong>1</strong> represents a negative number.
+                </li>
+
+            </ul>
+
+
+            <h3>
+                Magnitude
+            </h3>
+
+
+            <p>
+                The remaining bits represent the magnitude, or the
+                actual numerical value, of the number.
+            </p>
+
+
+            <h3>
+                Example
+            </h3>
+
+
+            <p>
+                Consider an 8-bit representation.
+            </p>
+
+
+            <div class="note-box">
+
+                <p
+                    style="
+                        text-align:center;
+                        font-size:24px;
+                        letter-spacing:4px;
+                    "
+                >
+                    <strong>0 0000101</strong>
+                </p>
+
+                <p style="text-align:center;">
+                    Positive 5
+                </p>
+
+            </div>
+
+
+            <p>
+                Here:
+            </p>
+
+
+            <ul>
+
+                <li>
+                    <strong>0</strong> is the sign bit, meaning
+                    positive.
+                </li>
+
+                <li>
+                    <strong>0000101</strong> represents the
+                    magnitude 5.
+                </li>
+
+            </ul>
+
+
+            <p>
+                For the negative value:
+            </p>
+
+
+            <div class="note-box">
+
+                <p
+                    style="
+                        text-align:center;
+                        font-size:24px;
+                        letter-spacing:4px;
+                    "
+                >
+                    <strong>1 0000101</strong>
+                </p>
+
+                <p style="text-align:center;">
+                    Negative 5
+                </p>
+
+            </div>
+
+
+            <p>
+                The magnitude remains the same, but the sign bit
+                changes from 0 to 1.
+            </p>
+
+
+
+            <!-- =================================
+                 ONE'S COMPLEMENT
+            ================================== -->
+
+            <h2>
+                One's Complement
+            </h2>
+
+
+            <p>
+                In <strong>One's Complement</strong>
+                representation, a negative number is obtained by
+                changing every bit of the positive number.
+            </p>
+
+
+            <p>
+                In other words:
+            </p>
+
+
+            <div class="note-box">
+
+                <p
+                    style="
+                        text-align:center;
+                        font-size:21px;
+                    "
+                >
+                    <strong>
+                        0 → 1
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        1 → 0
+                    </strong>
+                </p>
+
+            </div>
+
+
+            <h3>
+                Example
+            </h3>
+
+
+            <p>
+                Suppose the positive number is represented as:
+            </p>
+
+
+            <div class="note-box">
+
+                <p
+                    style="
+                        text-align:center;
+                        font-size:24px;
+                        letter-spacing:4px;
+                    "
+                >
+                    <strong>00000101</strong>
+                </p>
+
+            </div>
+
+
+            <p>
+                To obtain its One's Complement, change every 0 to 1
+                and every 1 to 0.
+            </p>
+
+
+            <div class="note-box">
+
+                <p
+                    style="
+                        text-align:center;
+                        font-size:24px;
+                        letter-spacing:4px;
+                    "
+                >
+                    <strong>11111010</strong>
+                </p>
+
+            </div>
+
+
+            <p>
+                Therefore, the One's Complement is obtained by
+                <strong>inverting all the bits</strong>.
+            </p>
+
+
+            <h3>
+                Important Point
+            </h3>
+
+
+            <p>
+                One's Complement has two representations of zero:
+            </p>
+
+
+            <ul>
+
+                <li>
+                    Positive zero
+                </li>
+
+                <li>
+                    Negative zero
+                </li>
+
+            </ul>
+
+
+
+            <!-- =================================
+                 TWO'S COMPLEMENT
+            ================================== -->
+
+            <h2>
+                Two's Complement
+            </h2>
+
+
+            <p>
+                <strong>Two's Complement</strong> is another method
+                of representing signed integers.
+            </p>
+
+
+            <p>
+                To find the Two's Complement of a binary number:
+            </p>
+
+
+            <ol>
+
+                <li>
+                    Find the One's Complement by changing every
+                    0 to 1 and every 1 to 0.
+                </li>
+
+                <li>
+                    Add 1 to the result.
+                </li>
+
+            </ol>
+
+
+            <div class="note-box">
+
+                <p
+                    style="
+                        text-align:center;
+                        font-size:20px;
+                    "
+                >
+
+                    <strong>
+                        Two's Complement
+                    </strong>
+
+                    <br>
+
+                    =
+                    One's Complement
+                    + 1
+
+                </p>
+
+            </div>
+
+
+            <h3>
+                Example
+            </h3>
+
+
+            <p>
+                Consider the binary representation:
+            </p>
+
+
+            <div class="note-box">
+
+                <p
+                    style="
+                        text-align:center;
+                        font-size:23px;
+                        letter-spacing:4px;
+                    "
+                >
+                    <strong>00000101</strong>
+                </p>
+
+            </div>
+
+
+            <p>
+                <strong>Step 1:</strong>
+                Find the One's Complement.
+            </p>
+
+
+            <div class="note-box">
+
+                <p
+                    style="
+                        text-align:center;
+                        font-size:23px;
+                        letter-spacing:4px;
+                    "
+                >
+                    00000101
+                    <br>
+                    ↓
+                    <br>
+                    <strong>11111010</strong>
+                </p>
+
+            </div>
+
+
+            <p>
+                <strong>Step 2:</strong>
+                Add 1.
+            </p>
+
+
+            <div class="note-box">
+
+                <p
+                    style="
+                        text-align:center;
+                        font-size:23px;
+                        letter-spacing:4px;
+                    "
+                >
+                    11111010
+                    <br>
+                    + 00000001
+                    <br>
+                    <strong>11111011</strong>
+                </p>
+
+            </div>
+
+
+            <p>
+                Therefore, the Two's Complement is:
+            </p>
+
+
+            <div class="note-box">
+
+                <p
+                    style="
+                        text-align:center;
+                        font-size:25px;
+                        letter-spacing:4px;
+                    "
+                >
+                    <strong>11111011</strong>
+                </p>
+
+            </div>
+
+
+
+            <!-- =================================
+                 SIGN AND MAGNITUDE VS ONE'S
+            ================================== -->
+
+            <h2>
+                Sign and Magnitude vs One's Complement
+            </h2>
+
+
+            <table
+                style="
+                    width:100%;
+                    border-collapse:collapse;
+                    margin:25px 0;
+                "
+            >
+
+                <tr>
+
+                    <th style="border:1px solid #cfd8d2; padding:12px;">
+                        Feature
+                    </th>
+
+                    <th style="border:1px solid #cfd8d2; padding:12px;">
+                        Sign and Magnitude
+                    </th>
+
+                    <th style="border:1px solid #cfd8d2; padding:12px;">
+                        One's Complement
+                    </th>
+
+                </tr>
+
+
+                <tr>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Basic method
+                    </td>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        One bit represents sign and remaining bits
+                        represent magnitude
+                    </td>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Negative value is obtained by inverting
+                        every bit
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Positive number
+                    </td>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Sign bit 0 with magnitude
+                    </td>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Normal binary representation
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Negative number
+                    </td>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Sign bit becomes 1
+                    </td>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        All bits are inverted
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Zero
+                    </td>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Has positive and negative zero
+                    </td>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Has positive and negative zero
+                    </td>
+
+                </tr>
+
+            </table>
+
+
+
+            <!-- =================================
+                 ONE'S VS TWO'S
+            ================================== -->
+
+            <h2>
+                One's Complement vs Two's Complement
+            </h2>
+
+
+            <table
+                style="
+                    width:100%;
+                    border-collapse:collapse;
+                    margin:25px 0;
+                "
+            >
+
+                <tr>
+
+                    <th style="border:1px solid #cfd8d2; padding:12px;">
+                        Feature
+                    </th>
+
+                    <th style="border:1px solid #cfd8d2; padding:12px;">
+                        One's Complement
+                    </th>
+
+                    <th style="border:1px solid #cfd8d2; padding:12px;">
+                        Two's Complement
+                    </th>
+
+                </tr>
+
+
+                <tr>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Method
+                    </td>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Invert every bit
+                    </td>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Invert every bit and add 1
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Operation
+                    </td>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        0 becomes 1 and 1 becomes 0
+                    </td>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        One's Complement + 1
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Zero
+                    </td>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Two representations of zero
+                    </td>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        One representation of zero
+                    </td>
+
+                </tr>
+
+            </table>
+
+
+
+            <!-- =================================
+                 COMPLETE COMPARISON
+            ================================== -->
+
+            <h2>
+                Comparison of Integer Representations
+            </h2>
+
+
+            <table
+                style="
+                    width:100%;
+                    border-collapse:collapse;
+                    margin:25px 0;
+                "
+            >
+
+                <tr>
+
+                    <th style="border:1px solid #cfd8d2; padding:12px;">
+                        Method
+                    </th>
+
+                    <th style="border:1px solid #cfd8d2; padding:12px;">
+                        Main Idea
+                    </th>
+
+                    <th style="border:1px solid #cfd8d2; padding:12px;">
+                        Negative Number
+                    </th>
+
+                    <th style="border:1px solid #cfd8d2; padding:12px;">
+                        Zero
+                    </th>
+
+                </tr>
+
+
+                <tr>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Sign & Magnitude
+                    </td>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Separate sign bit and magnitude
+                    </td>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Change the sign bit to 1
+                    </td>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Two zeros
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        One's Complement
+                    </td>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Invert all bits
+                    </td>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Change 0 → 1 and 1 → 0
+                    </td>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Two zeros
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Two's Complement
+                    </td>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Invert all bits and add 1
+                    </td>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        One's Complement + 1
+                    </td>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        One zero
+                    </td>
+
+                </tr>
+
+            </table>
+
+
+
+            <!-- =================================
+                 QUICK REVISION
+            ================================== -->
+
+            <h2>
+                Quick Revision
+            </h2>
+
+
+            <ul>
+
+                <li>
+                    Signed integers can represent both positive and
+                    negative numbers.
+                </li>
+
+                <li>
+                    In Sign and Magnitude, one bit represents the
+                    sign and the remaining bits represent magnitude.
+                </li>
+
+                <li>
+                    In Sign and Magnitude, 0 represents positive and
+                    1 represents negative.
+                </li>
+
+                <li>
+                    One's Complement is obtained by changing every
+                    0 to 1 and every 1 to 0.
+                </li>
+
+                <li>
+                    Two's Complement is obtained by taking the
+                    One's Complement and adding 1.
+                </li>
+
+                <li>
+                    Sign and Magnitude and One's Complement have two
+                    representations of zero.
+                </li>
+
+                <li>
+                    Two's Complement has one representation of zero.
+                </li>
+
+            </ul>
+
+
+        </article>
+
+
+    </main>
+
+
+</div>
+
+
+
+<script>
+
+function toggleTheme() {
+
+    document.body.classList.toggle("dark-mode");
+
+    const button =
+        document.getElementById("themeButton");
+
+
+    if (
+        document.body.classList.contains("dark-mode")
+    ) {
+
+        button.textContent = "☀ Light";
+
+    } else {
+
+        button.textContent = "🌙 Theme";
+
+    }
+
+}
+
+</script>
+
+
+</body>
+
+</html>

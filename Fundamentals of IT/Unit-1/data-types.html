@@ -1,0 +1,2111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Data and Its Types | PENCIL BEATS</title>
+
+    <link
+        rel="stylesheet"
+        href="../../css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<div class="study-page">
+
+
+    <!-- =========================================
+         LEFT SIDEBAR
+    ========================================== -->
+
+    <aside class="study-sidebar">
+
+
+        <div class="sidebar-brand">
+
+            <h1>
+                PENCIL BEATS
+            </h1>
+
+            <p>
+                Fundamentals of IT
+            </p>
+
+        </div>
+
+
+        <div class="sidebar-heading">
+            UNIT 1
+        </div>
+
+
+        <a href="computer-hardware.html" class="topic-link">
+            Computer Hardware
+        </a>
+
+        <a href="input-devices.html" class="topic-link">
+            Input Devices
+        </a>
+
+        <a href="output-devices.html" class="topic-link">
+            Output Devices
+        </a>
+
+        <a href="speakers.html" class="topic-link">
+            Speakers
+        </a>
+
+        <a
+            href="data-types.html"
+            class="topic-link active"
+        >
+            Data and Its Types
+        </a>
+
+        <a href="computer-model.html" class="topic-link">
+            Simple Model of a Computer
+        </a>
+
+        <a href="memory.html" class="topic-link">
+            Memory
+        </a>
+
+        <a href="data-representation.html" class="topic-link">
+            Data Representation
+        </a>
+
+        <a href="number-systems.html" class="topic-link">
+            Number Systems
+        </a>
+
+        <a href="integer-representation.html" class="topic-link">
+            Integer Representation
+        </a>
+
+        <a href="character-representation.html" class="topic-link">
+            Character Representation
+        </a>
+
+        <a href="floating-point.html" class="topic-link">
+            Floating Point
+        </a>
+
+        <a href="html-css-programming.html" class="topic-link">
+            HTML, CSS & Programming
+        </a>
+
+
+    </aside>
+
+
+
+    <!-- =========================================
+         MAIN CONTENT
+    ========================================== -->
+
+    <main class="study-main">
+
+
+        <header class="study-topbar">
+
+            <a
+                href="index.html"
+                class="back-button"
+            >
+                ← Unit 1
+            </a>
+
+
+            <button
+                class="mode-button"
+                onclick="toggleTheme()"
+                id="themeButton"
+            >
+                🌙 Theme
+            </button>
+
+        </header>
+
+
+
+        <article class="notes-container">
+
+
+            <!-- =================================
+                 TITLE
+            ================================== -->
+
+            <h1>
+                Data and Its Types
+            </h1>
+
+
+            <p>
+                <strong>Data</strong> is the raw form of information.
+                It is a collection of facts, figures, symbols or
+                observations that represent details about events,
+                objects or phenomena.
+            </p>
+
+
+            <p>
+                By itself, data may not provide meaningful
+                information. When data is organized, processed and
+                interpreted, it can be transformed into useful
+                information and insights.
+            </p>
+
+
+            <div class="note-box">
+
+                <p>
+                    <strong>Simple idea:</strong>
+                </p>
+
+                <p>
+                    Data → Processing → Meaningful Information
+                </p>
+
+            </div>
+
+
+            <p>
+                In data science and computing, data is categorized
+                into different types based on its nature, structure
+                and how it is represented.
+            </p>
+
+
+
+            <!-- =================================
+                 QUANTITATIVE
+            ================================== -->
+
+            <h2>
+                Quantitative Data
+            </h2>
+
+
+            <p>
+                <strong>Quantitative data</strong> is data that can
+                be measured, counted and expressed in numerical
+                form.
+            </p>
+
+
+            <p>
+                It answers questions such as:
+            </p>
+
+
+            <ul>
+
+                <li>
+                    How many?
+                </li>
+
+                <li>
+                    How much?
+                </li>
+
+                <li>
+                    How often?
+                </li>
+
+                <li>
+                    What is the value?
+                </li>
+
+            </ul>
+
+
+            <h3>
+                Examples
+            </h3>
+
+
+            <ul>
+
+                <li>
+                    Age = 20 years
+                </li>
+
+                <li>
+                    Height = 170 cm
+                </li>
+
+                <li>
+                    Weight = 65 kg
+                </li>
+
+                <li>
+                    Number of students = 50
+                </li>
+
+                <li>
+                    Temperature = 32°C
+                </li>
+
+                <li>
+                    Monthly income = ₹40,000
+                </li>
+
+                <li>
+                    Number of computers = 25
+                </li>
+
+            </ul>
+
+
+            <p>
+                Quantitative data is mainly divided into two types:
+            </p>
+
+
+            <ol>
+
+                <li>
+                    Discrete Data
+                </li>
+
+                <li>
+                    Continuous Data
+                </li>
+
+            </ol>
+
+
+
+            <!-- =================================
+                 DISCRETE
+            ================================== -->
+
+            <h2>
+                Discrete Data
+            </h2>
+
+
+            <p>
+                <strong>Discrete data</strong> consists of values
+                that are countable and are usually expressed as
+                whole numbers.
+            </p>
+
+
+            <p>
+                The values occur as separate and distinct units.
+                Discrete data is obtained through
+                <strong>counting</strong>.
+            </p>
+
+
+            <h3>
+                Examples
+            </h3>
+
+
+            <ul>
+
+                <li>
+                    Number of students in a class = 45
+                </li>
+
+                <li>
+                    Number of books = 120
+                </li>
+
+                <li>
+                    Number of cars = 8
+                </li>
+
+            </ul>
+
+
+            <p>
+                Normally, fractions do not make sense when we are
+                counting separate objects. For example, a classroom
+                can have 40 or 41 students, but not 40.5 students.
+            </p>
+
+
+            <h3>
+                Characteristics of Discrete Data
+            </h3>
+
+
+            <table
+                style="
+                    width:100%;
+                    border-collapse:collapse;
+                    margin:25px 0;
+                "
+            >
+
+                <tr>
+
+                    <th style="border:1px solid #cfd8d2; padding:12px;">
+                        Characteristic
+                    </th>
+
+                    <th style="border:1px solid #cfd8d2; padding:12px;">
+                        Description
+                    </th>
+
+                </tr>
+
+
+                <tr>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Nature
+                    </td>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Countable
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Values
+                    </td>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Separate and distinct
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Usually represented by
+                    </td>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Whole numbers
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Decimals / Fractions
+                    </td>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Generally not meaningful
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Obtained by
+                    </td>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Counting
+                    </td>
+
+                </tr>
+
+
+            </table>
+
+
+
+            <!-- =================================
+                 CONTINUOUS
+            ================================== -->
+
+            <h2>
+                Continuous Data
+            </h2>
+
+
+            <p>
+                <strong>Continuous data</strong> consists of values
+                that can take any value within a given range.
+            </p>
+
+
+            <p>
+                It is obtained through
+                <strong>measurement</strong> and can include
+                decimals and fractions.
+            </p>
+
+
+            <h3>
+                Examples
+            </h3>
+
+
+            <ul>
+
+                <li>
+                    Height = 172.5 cm
+                </li>
+
+                <li>
+                    Weight = 65.75 kg
+                </li>
+
+                <li>
+                    Temperature = 36.7°C
+                </li>
+
+                <li>
+                    Time = 12.45 seconds
+                </li>
+
+                <li>
+                    Distance = 5.68 km
+                </li>
+
+            </ul>
+
+
+            <p>
+                For example, a person's height can be 170 cm,
+                170.1 cm, 170.15 cm, 170.156 cm and so on,
+                depending on the precision of measurement.
+            </p>
+
+
+            <h3>
+                Characteristics of Continuous Data
+            </h3>
+
+
+            <table
+                style="
+                    width:100%;
+                    border-collapse:collapse;
+                    margin:25px 0;
+                "
+            >
+
+                <tr>
+
+                    <th style="border:1px solid #cfd8d2; padding:12px;">
+                        Characteristic
+                    </th>
+
+                    <th style="border:1px solid #cfd8d2; padding:12px;">
+                        Description
+                    </th>
+
+                </tr>
+
+
+                <tr>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Nature
+                    </td>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Measurable
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Values
+                    </td>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Any value within a range
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Usually represented by
+                    </td>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Integers, decimals or fractions
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Decimals / Fractions
+                    </td>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Meaningful
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Obtained by
+                    </td>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Measurement
+                    </td>
+
+                </tr>
+
+
+            </table>
+
+
+
+            <!-- =================================
+                 COMPARISON
+            ================================== -->
+
+            <h2>
+                Discrete Data vs Continuous Data
+            </h2>
+
+
+            <table
+                style="
+                    width:100%;
+                    border-collapse:collapse;
+                    margin:25px 0;
+                "
+            >
+
+                <tr>
+
+                    <th style="border:1px solid #cfd8d2; padding:12px;">
+                        Feature
+                    </th>
+
+                    <th style="border:1px solid #cfd8d2; padding:12px;">
+                        Discrete Data
+                    </th>
+
+                    <th style="border:1px solid #cfd8d2; padding:12px;">
+                        Continuous Data
+                    </th>
+
+                </tr>
+
+
+                <tr>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Meaning
+                    </td>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Obtained by counting
+                    </td>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Obtained by measuring
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Values
+                    </td>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Separate values
+                    </td>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Any value within a range
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Decimal values
+                    </td>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Generally not applicable
+                    </td>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Applicable
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Nature
+                    </td>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Countable
+                    </td>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Measurable
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Example
+                    </td>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Number of students
+                    </td>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Height of students
+                    </td>
+
+                </tr>
+
+            </table>
+
+
+            <div class="note-box">
+
+                <p>
+                    <strong>Remember:</strong>
+                </p>
+
+                <p>
+                    Discrete = <strong>Counting</strong>
+                </p>
+
+                <p>
+                    Continuous = <strong>Measuring</strong>
+                </p>
+
+            </div>
+
+
+
+            <!-- =================================
+                 QUALITATIVE
+            ================================== -->
+
+            <h2>
+                Qualitative Data
+            </h2>
+
+
+            <p>
+                <strong>Qualitative data</strong> describes
+                qualities, characteristics or attributes rather
+                than numerical values.
+            </p>
+
+
+            <p>
+                It is generally non-numerical and is used to
+                understand opinions, behaviours, experiences and
+                categories.
+            </p>
+
+
+            <p>
+                Qualitative data may be collected through interviews,
+                focus groups, personal diaries, laboratory notes,
+                maps, photographs and other observations or written
+                records.
+            </p>
+
+
+            <h3>
+                Examples
+            </h3>
+
+
+            <ul>
+
+                <li>
+                    Colour
+                </li>
+
+                <li>
+                    Brand
+                </li>
+
+                <li>
+                    Gender
+                </li>
+
+                <li>
+                    Customer feedback
+                </li>
+
+            </ul>
+
+
+            <p>
+                Two important types of qualitative data covered in
+                the material are <strong>Nominal Data</strong> and
+                <strong>Ordinal Data</strong>.
+            </p>
+
+
+
+            <!-- =================================
+                 NOMINAL
+            ================================== -->
+
+            <h2>
+                Nominal Data
+            </h2>
+
+
+            <p>
+                <strong>Nominal data</strong> is categorical data
+                used to label or classify items into different
+                groups without any order or ranking.
+            </p>
+
+
+            <p>
+                The categories are distinct and mutually exclusive.
+                They represent names or qualities rather than
+                numerical values.
+            </p>
+
+
+            <p>
+                Since there is no meaningful order between the
+                categories, arithmetic operations cannot be
+                meaningfully performed on nominal data.
+            </p>
+
+
+            <h3>
+                Characteristics of Nominal Data
+            </h3>
+
+
+            <ul>
+
+                <li>
+                    It is qualitative in nature.
+                </li>
+
+                <li>
+                    It describes categories or labels.
+                </li>
+
+                <li>
+                    Categories are distinct and mutually exclusive.
+                </li>
+
+                <li>
+                    There is no fixed order or ranking.
+                </li>
+
+                <li>
+                    Addition, subtraction, multiplication and
+                    division cannot be meaningfully performed.
+                </li>
+
+                <li>
+                    The mode can be calculated.
+                </li>
+
+                <li>
+                    Mean and median cannot be determined from
+                    nominal categories.
+                </li>
+
+            </ul>
+
+
+
+            <h3>
+                Methods of Collecting Nominal Data
+            </h3>
+
+
+            <ul>
+
+                <li>
+
+                    <strong>
+                        Surveys and Questionnaires:
+                    </strong>
+
+                    Multiple-choice questions can be used to
+                    classify responses into categories.
+
+                </li>
+
+
+                <li>
+
+                    <strong>
+                        Interviews:
+                    </strong>
+
+                    Direct questions can be used to collect
+                    categorical information.
+
+                </li>
+
+
+                <li>
+
+                    <strong>
+                        Observation:
+                    </strong>
+
+                    Categories can be recorded based on visible
+                    characteristics.
+
+                </li>
+
+
+                <li>
+
+                    <strong>
+                        Administrative or Official Records:
+                    </strong>
+
+                    Existing records and databases can provide
+                    category-based information.
+
+                </li>
+
+
+                <li>
+
+                    <strong>
+                        Online Forms and Registration Sheets:
+                    </strong>
+
+                    Dropdown menus, radio buttons and checkboxes
+                    can collect categorical responses.
+
+                </li>
+
+            </ul>
+
+
+
+            <h3>
+                Visualisation of Nominal Data
+            </h3>
+
+
+            <ul>
+
+                <li>
+                    <strong>Frequency tables:</strong>
+                    Show categories with their frequencies or counts.
+                </li>
+
+                <li>
+                    <strong>Bar charts:</strong>
+                    Represent each category using a bar whose
+                    size corresponds to its frequency.
+                </li>
+
+                <li>
+                    <strong>Pie charts:</strong>
+                    Show the proportion of each category as a part
+                    of the whole.
+                </li>
+
+            </ul>
+
+
+
+            <!-- =================================
+                 ORDINAL
+            ================================== -->
+
+            <h2>
+                Ordinal Data
+            </h2>
+
+
+            <p>
+                <strong>Ordinal data</strong> is categorical data
+                in which the categories have a meaningful order or
+                ranking.
+            </p>
+
+
+            <p>
+                However, the exact differences or intervals between
+                the categories cannot be measured or assumed to be
+                equal.
+            </p>
+
+
+            <h3>
+                Examples
+            </h3>
+
+
+            <p>
+                <strong>Customer Satisfaction:</strong>
+            </p>
+
+
+            <p>
+                Very Bad → Bad → Okay → Good → Excellent
+            </p>
+
+
+            <p>
+                <strong>Education Level:</strong>
+            </p>
+
+
+            <p>
+                High School → Bachelor's → Master's → PhD
+            </p>
+
+
+            <p>
+                <strong>Likert Scale:</strong>
+            </p>
+
+
+            <p>
+                Strongly Disagree → Disagree → Neutral → Agree →
+                Strongly Agree
+            </p>
+
+
+            <h3>
+                Characteristics of Ordinal Data
+            </h3>
+
+
+            <ul>
+
+                <li>
+                    Categories have a meaningful ranking.
+                </li>
+
+                <li>
+                    The exact difference between consecutive
+                    categories is not known.
+                </li>
+
+                <li>
+                    The intervals between categories may not be
+                    equal.
+                </li>
+
+                <li>
+                    It is commonly used for opinions, preferences,
+                    satisfaction levels and grades.
+                </li>
+
+                <li>
+                    Arithmetic operations such as addition,
+                    subtraction, multiplication and division cannot
+                    be meaningfully performed on the categories.
+                </li>
+
+                <li>
+                    Because the data is ordered, rankings, median
+                    and percentiles can be determined.
+                </li>
+
+                <li>
+                    It is commonly collected through rating scales,
+                    questionnaires and feedback forms.
+                </li>
+
+            </ul>
+
+
+
+            <!-- =================================
+                 STRUCTURED
+            ================================== -->
+
+            <h2>
+                Structured Data
+            </h2>
+
+
+            <p>
+                <strong>Structured data</strong> is data organized
+                in a predefined format. It follows a well-defined
+                structure or data model.
+            </p>
+
+
+            <p>
+                It is commonly stored in
+                <strong>rows and columns</strong>, which makes it
+                easier for both humans and computers to read,
+                retrieve and analyse.
+            </p>
+
+
+            <h3>
+                Example
+            </h3>
+
+
+            <p>
+                A customer database can contain fields such as:
+            </p>
+
+
+            <ul>
+
+                <li>
+                    Name
+                </li>
+
+                <li>
+                    Address
+                </li>
+
+                <li>
+                    Phone Number
+                </li>
+
+                <li>
+                    Email
+                </li>
+
+            </ul>
+
+
+            <h3>
+                Characteristics of Structured Data
+            </h3>
+
+
+            <ul>
+
+                <li>
+                    Follows a predefined structure.
+                </li>
+
+                <li>
+                    Stored in rows and columns.
+                </li>
+
+                <li>
+                    Data has clearly defined meaning and format.
+                </li>
+
+                <li>
+                    Data resides in fixed fields within records.
+                </li>
+
+                <li>
+                    Data elements can be efficiently accessed and
+                    processed.
+                </li>
+
+            </ul>
+
+
+            <h3>
+                Common Sources
+            </h3>
+
+
+            <ul>
+
+                <li>
+                    Relational databases
+                </li>
+
+                <li>
+                    Spreadsheets
+                </li>
+
+                <li>
+                    Online forms and surveys
+                </li>
+
+                <li>
+                    Web and server logs
+                </li>
+
+                <li>
+                    IoT sensors
+                </li>
+
+                <li>
+                    Medical monitoring devices
+                </li>
+
+            </ul>
+
+
+
+            <!-- =================================
+                 RELATIONAL DATABASE
+            ================================== -->
+
+            <h2>
+                Relational Database
+            </h2>
+
+
+            <p>
+                A <strong>relational database</strong> organizes
+                data into tables.
+            </p>
+
+
+            <p>
+                These tables contain
+                <strong>rows and columns</strong>. Each row
+                represents a record, while columns represent
+                particular fields or attributes.
+            </p>
+
+
+            <p>
+                Relational databases are useful because organized
+                data can be stored and retrieved efficiently.
+            </p>
+
+
+            <p>
+                Queries can be used to search for and retrieve
+                specific information from the organized data.
+                <strong>SQL</strong> is commonly used for working
+                with relational databases.
+            </p>
+
+
+            <div class="note-box">
+
+                <p>
+                    <strong>Simple example:</strong>
+                </p>
+
+                <p>
+                    A student table may contain:
+                </p>
+
+                <p>
+                    Roll No. | Name | Course | Marks
+                </p>
+
+                <p>
+                    Each row represents one student's record.
+                </p>
+
+            </div>
+
+
+
+            <!-- =================================
+                 UNSTRUCTURED
+            ================================== -->
+
+            <h2>
+                Unstructured Data
+            </h2>
+
+
+            <p>
+                <strong>Unstructured data</strong> is information
+                that does not have a predefined format or fixed
+                structure.
+            </p>
+
+
+            <p>
+                In simple words, it is data that is messy,
+                unorganized and does not fit neatly into rows and
+                columns like a spreadsheet.
+            </p>
+
+
+            <p>
+                Because it does not follow a clear pattern,
+                unstructured data can be more difficult to store,
+                process and search.
+            </p>
+
+
+            <h3>
+                Examples
+            </h3>
+
+
+            <ul>
+
+                <li>
+                    Photos
+                </li>
+
+                <li>
+                    Videos
+                </li>
+
+                <li>
+                    Audio files
+                </li>
+
+                <li>
+                    Emails
+                </li>
+
+                <li>
+                    Social media posts
+                </li>
+
+                <li>
+                    Comments
+                </li>
+
+                <li>
+                    Reports and articles
+                </li>
+
+                <li>
+                    PDFs and Word files
+                </li>
+
+                <li>
+                    Websites and blogs
+                </li>
+
+            </ul>
+
+
+            <h3>
+                Characteristics of Unstructured Data
+            </h3>
+
+
+            <ul>
+
+                <li>
+                    It has no fixed predefined structure.
+                </li>
+
+                <li>
+                    It can contain text, images, audio and video.
+                </li>
+
+                <li>
+                    It can come from many different sources.
+                </li>
+
+                <li>
+                    It can be very large in volume.
+                </li>
+
+                <li>
+                    It is more difficult to categorize and organize.
+                </li>
+
+            </ul>
+
+
+            <h3>
+                Challenges with Unstructured Data
+            </h3>
+
+
+            <ul>
+
+                <li>
+                    <strong>Hard to store:</strong>
+                    Different formats may require large and varied
+                    storage systems.
+                </li>
+
+                <li>
+                    <strong>Difficult to search:</strong>
+                    Without labels or organization, finding specific
+                    information can be difficult.
+                </li>
+
+                <li>
+                    <strong>Difficult to analyse:</strong>
+                    Special software and more complex techniques may
+                    be required.
+                </li>
+
+            </ul>
+
+
+
+            <!-- =================================
+                 EXTRACTING UNSTRUCTURED DATA
+            ================================== -->
+
+            <h2>
+                Extracting Information from Unstructured Data
+            </h2>
+
+
+            <p>
+                Since unstructured data does not have a fixed
+                structure, techniques can be used to organize and
+                extract useful information from it.
+            </p>
+
+
+            <h3>
+                1. Tagging
+            </h3>
+
+
+            <p>
+                <strong>Tagging</strong> means adding labels or
+                keywords to data so that it can be identified and
+                found more easily.
+            </p>
+
+
+            <p>
+                For example, a photograph of a dog could be tagged
+                with words such as "dog", "pet" or "animal".
+            </p>
+
+
+            <h3>
+                2. Classifying Data
+            </h3>
+
+
+            <p>
+                <strong>Classification</strong> means organizing
+                data into groups or categories.
+            </p>
+
+
+            <p>
+                For example, customer reviews can be grouped into
+                positive and negative feedback.
+            </p>
+
+
+            <h3>
+                3. Data Mining
+            </h3>
+
+
+            <p>
+                <strong>Data mining</strong> helps find patterns
+                and useful information in large amounts of data.
+            </p>
+
+
+            <p>
+                For example, customer reviews can be analysed to
+                find common complaints or social media posts can
+                be studied to identify patterns and trends.
+            </p>
+
+
+
+            <!-- =================================
+                 STRUCTURED VS UNSTRUCTURED
+            ================================== -->
+
+            <h2>
+                Structured Data vs Unstructured Data
+            </h2>
+
+
+            <table
+                style="
+                    width:100%;
+                    border-collapse:collapse;
+                    margin:25px 0;
+                "
+            >
+
+                <tr>
+
+                    <th style="border:1px solid #cfd8d2; padding:12px;">
+                        Feature
+                    </th>
+
+                    <th style="border:1px solid #cfd8d2; padding:12px;">
+                        Structured Data
+                    </th>
+
+                    <th style="border:1px solid #cfd8d2; padding:12px;">
+                        Unstructured Data
+                    </th>
+
+                </tr>
+
+
+                <tr>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Format
+                    </td>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Organized in rows and columns
+                    </td>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        No fixed format
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Examples
+                    </td>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Names, ages and addresses in a database
+                    </td>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Photos, videos, emails and social media posts
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Storage
+                    </td>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Relational databases such as SQL
+                    </td>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Files, cloud storage or NoSQL databases
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Analysis
+                    </td>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Easier to search, sort and analyse
+                    </td>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Requires advanced processing
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Data form
+                    </td>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Predictable text and numbers
+                    </td>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Mixed text, audio, video and images
+                    </td>
+
+                </tr>
+
+            </table>
+
+
+
+            <!-- =================================
+                 SEMI STRUCTURED
+            ================================== -->
+
+            <h2>
+                Semi-Structured Data
+            </h2>
+
+
+            <p>
+                <strong>Semi-structured data</strong> does not
+                reside in a traditional relational database like
+                SQL, but it still has some organizational properties.
+            </p>
+
+
+            <p>
+                It does not follow a strict schema like structured
+                data, but it contains elements such as
+                <strong>tags, markers, labels or keys</strong>
+                that make the data identifiable and searchable.
+            </p>
+
+
+            <h3>
+                Characteristics of Semi-Structured Data
+            </h3>
+
+
+            <h3>
+                1. Flexible Schema
+            </h3>
+
+
+            <p>
+                The structure can vary from one entry to another.
+                For example, one JSON object may contain five fields
+                while another may contain only three.
+            </p>
+
+
+            <h3>
+                2. Human-Readable Format
+            </h3>
+
+
+            <p>
+                Formats such as JSON and XML can be understood by
+                both humans and machines.
+            </p>
+
+
+            <h3>
+                3. Scalable
+            </h3>
+
+
+            <p>
+                Semi-structured data can be handled by modern
+                NoSQL databases and is useful in Big Data
+                environments.
+            </p>
+
+
+            <h3>
+                4. Metadata-Rich
+            </h3>
+
+
+            <p>
+                Tags and attributes provide additional context,
+                which helps in sorting and analysing the data.
+            </p>
+
+
+
+            <!-- =================================
+                 EXAMPLES
+            ================================== -->
+
+            <h2>
+                Examples of Semi-Structured Data
+            </h2>
+
+
+            <ul>
+
+                <li>
+                    JSON
+                </li>
+
+                <li>
+                    XML
+                </li>
+
+                <li>
+                    CSV files with inconsistent rows
+                </li>
+
+                <li>
+                    Emails with structured headers and
+                    unstructured body text
+                </li>
+
+                <li>
+                    Sensor data from IoT devices
+                </li>
+
+                <li>
+                    HTML web pages
+                </li>
+
+            </ul>
+
+
+
+            <!-- =================================
+                 JSON
+            ================================== -->
+
+            <h2>
+                JSON
+            </h2>
+
+
+            <p>
+                <strong>JSON</strong> stands for
+                <strong>JavaScript Object Notation</strong>.
+            </p>
+
+
+            <p>
+                It is an example of semi-structured data. JSON uses
+                keys and values to organize information without
+                requiring every record to follow exactly the same
+                structure.
+            </p>
+
+
+            <div class="note-box">
+
+<pre style="
+    white-space:pre-wrap;
+    margin:0;
+    font-family:Consolas, monospace;
+">
+
+{
+    "name": "Shuaib",
+    "course": "Data Science",
+    "semester": 1
+}
+
+</pre>
+
+            </div>
+
+
+            <p>
+                Here, the labels such as
+                <strong>name</strong>,
+                <strong>course</strong> and
+                <strong>semester</strong>
+                help identify the stored values.
+            </p>
+
+
+
+            <!-- =================================
+                 METADATA
+            ================================== -->
+
+            <h2>
+                Metadata
+            </h2>
+
+
+            <p>
+                <strong>Metadata</strong> means information that
+                provides additional information or context about
+                other data.
+            </p>
+
+
+            <p>
+                In semi-structured data, tags and attributes can
+                provide metadata that helps identify, organize,
+                sort and analyse the data.
+            </p>
+
+
+            <div class="note-box">
+
+                <p>
+                    <strong>Simple idea:</strong>
+                </p>
+
+                <p>
+                    Data = the actual information
+                </p>
+
+                <p>
+                    Metadata = information that describes or gives
+                    context about that data
+                </p>
+
+            </div>
+
+
+
+            <!-- =================================
+                 CHALLENGES
+            ================================== -->
+
+            <h2>
+                Challenges of Semi-Structured Data
+            </h2>
+
+
+            <ul>
+
+                <li>
+                    <strong>Complex Querying:</strong>
+                    Queries may not be as straightforward as SQL
+                    queries on structured data.
+                </li>
+
+                <li>
+                    <strong>Data Cleaning:</strong>
+                    Irregular structures can cause inconsistency
+                    and make integration more difficult.
+                </li>
+
+                <li>
+                    <strong>Tool Compatibility:</strong>
+                    Not every analytics tool supports all
+                    semi-structured formats directly.
+                </li>
+
+            </ul>
+
+
+
+            <!-- =================================
+                 QUICK COMPARISON
+            ================================== -->
+
+            <h2>
+                Structured, Semi-Structured and Unstructured Data
+            </h2>
+
+
+            <table
+                style="
+                    width:100%;
+                    border-collapse:collapse;
+                    margin:25px 0;
+                "
+            >
+
+                <tr>
+
+                    <th style="border:1px solid #cfd8d2; padding:12px;">
+                        Feature
+                    </th>
+
+                    <th style="border:1px solid #cfd8d2; padding:12px;">
+                        Structured
+                    </th>
+
+                    <th style="border:1px solid #cfd8d2; padding:12px;">
+                        Semi-Structured
+                    </th>
+
+                    <th style="border:1px solid #cfd8d2; padding:12px;">
+                        Unstructured
+                    </th>
+
+                </tr>
+
+
+                <tr>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Structure
+                    </td>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Fixed
+                    </td>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Flexible
+                    </td>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        No predefined structure
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Common form
+                    </td>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Rows and columns
+                    </td>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Tags, keys and markers
+                    </td>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Free-form data
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Examples
+                    </td>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        SQL tables, spreadsheets
+                    </td>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        JSON, XML, HTML
+                    </td>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Photos, videos, audio
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Searching / analysis
+                    </td>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Easier
+                    </td>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Moderate / more complex
+                    </td>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        More difficult
+                    </td>
+
+                </tr>
+
+            </table>
+
+
+
+            <!-- =================================
+                 CRUD
+            ================================== -->
+
+            <h2>
+                CRUD
+            </h2>
+
+
+            <p>
+                <strong>CRUD</strong> represents four basic
+                operations that can be performed on data:
+            </p>
+
+
+            <ul>
+
+                <li>
+                    <strong>C — Create:</strong>
+                    Add new data.
+                </li>
+
+                <li>
+                    <strong>R — Read:</strong>
+                    View or retrieve existing data.
+                </li>
+
+                <li>
+                    <strong>U — Update:</strong>
+                    Modify existing data.
+                </li>
+
+                <li>
+                    <strong>D — Delete:</strong>
+                    Remove data.
+                </li>
+
+            </ul>
+
+
+            <div class="note-box">
+
+                <p style="text-align:center; font-size:20px;">
+
+                    <strong>
+                        Create → Read → Update → Delete
+                    </strong>
+
+                </p>
+
+            </div>
+
+
+
+            <!-- =================================
+                 KEY POINTS
+            ================================== -->
+
+            <h2>
+                Key Points to Remember
+            </h2>
+
+
+            <ul>
+
+                <li>
+                    Data is the raw form of information.
+                </li>
+
+                <li>
+                    Quantitative data is numerical and can be
+                    measured or counted.
+                </li>
+
+                <li>
+                    Discrete data is obtained by counting.
+                </li>
+
+                <li>
+                    Continuous data is obtained by measurement and
+                    can contain decimals or fractions.
+                </li>
+
+                <li>
+                    Qualitative data describes qualities,
+                    characteristics or categories.
+                </li>
+
+                <li>
+                    Nominal data has categories without ranking.
+                </li>
+
+                <li>
+                    Ordinal data has categories with meaningful
+                    ranking.
+                </li>
+
+                <li>
+                    Structured data follows a predefined format.
+                </li>
+
+                <li>
+                    Unstructured data has no predefined format.
+                </li>
+
+                <li>
+                    Semi-structured data has some organization
+                    through tags, keys or markers but does not
+                    follow a strict schema.
+                </li>
+
+                <li>
+                    JSON is an example of semi-structured data.
+                </li>
+
+                <li>
+                    Metadata provides additional information or
+                    context about data.
+                </li>
+
+                <li>
+                    CRUD stands for Create, Read, Update and Delete.
+                </li>
+
+            </ul>
+
+
+        </article>
+
+
+    </main>
+
+
+</div>
+
+
+
+<script>
+
+function toggleTheme() {
+
+    document.body.classList.toggle("dark-mode");
+
+    const button =
+        document.getElementById("themeButton");
+
+
+    if (
+        document.body.classList.contains("dark-mode")
+    ) {
+
+        button.textContent = "☀ Light";
+
+    } else {
+
+        button.textContent = "🌙 Theme";
+
+    }
+
+}
+
+</script>
+
+
+</body>
+
+</html>

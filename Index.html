@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>PENCIL BEATS</title>
+
+
+    <style>
+
+        /* =========================================
+           RESET
+        ========================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        html,
+        body {
+            width: 100%;
+            min-height: 100%;
+        }
+
+
+        body {
+            overflow-x: hidden;
+            font-family:
+                "Times New Roman",
+                Times,
+                serif;
+        }
+
+
+
+        /* =========================================
+           SPLASH SCREEN
+        ========================================== */
+
+        .splash-screen {
+
+            position: fixed;
+
+            inset: 0;
+
+            width: 100%;
+            height: 100vh;
+
+            z-index: 9999;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            text-align: center;
+
+            cursor: pointer;
+
+            overflow: hidden;
+
+
+            background:
+
+                radial-gradient(
+                    circle at 15% 20%,
+                    rgba(73, 112, 90, 0.35),
+                    transparent 35%
+                ),
+
+                radial-gradient(
+                    circle at 85% 80%,
+                    rgba(110, 120, 114, 0.35),
+                    transparent 35%
+                ),
+
+                linear-gradient(
+                    135deg,
+                    #123d2b,
+                    #355846,
+                    #69766f,
+                    #b8bfbb
+                );
+        }
+
+
+
+        /* =========================================
+           FAINT BACKGROUND DESIGN
+        ========================================== */
+
+        .splash-screen::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 450px;
+            height: 450px;
+
+            left: -120px;
+            top: -120px;
+
+            border-radius: 50%;
+
+            opacity: 0.08;
+
+            background:
+
+                radial-gradient(
+                    ellipse at center,
+                    transparent 30%,
+                    white 31%,
+                    transparent 34%
+                );
+
+            pointer-events: none;
+        }
+
+
+        .splash-screen::after {
+
+            content: "";
+
+            position: absolute;
+
+            width: 450px;
+            height: 450px;
+
+            right: -120px;
+            bottom: -120px;
+
+            border-radius: 50%;
+
+            opacity: 0.08;
+
+            background:
+
+                radial-gradient(
+                    ellipse at center,
+                    transparent 30%,
+                    white 31%,
+                    transparent 34%
+                );
+
+            pointer-events: none;
+        }
+
+
+
+        /* =========================================
+           SPLASH CONTENT
+        ========================================== */
+
+        .splash-content {
+
+            position: relative;
+
+            z-index: 2;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+            align-items: center;
+        }
+
+
+
+        /* =========================================
+           PENCIL BEATS
+        ========================================== */
+
+        .splash-content h1 {
+
+            color: white;
+
+            font-family:
+                "Times New Roman",
+                Times,
+                serif;
+
+            font-size:
+                clamp(
+                    65px,
+                    10vw,
+                    150px
+                );
+
+            font-weight: bold;
+
+            letter-spacing: 7px;
+
+            line-height: 1;
+
+            text-shadow:
+                0 5px 25px
+                rgba(0, 0, 0, 0.25);
+        }
+
+
+
+        /* =========================================
+           CONTINUE TEXT
+        ========================================== */
+
+        .continue-text {
+
+            margin-top: 25px;
+
+            color:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.92
+                );
+
+            font-size: 20px;
+
+            letter-spacing: 1px;
+
+            animation:
+                pulse 2s infinite;
+        }
+
+
+
+        /* =========================================
+           CREATOR NAME
+        ========================================== */
+
+        .creator {
+
+            position: absolute;
+
+            bottom: 25px;
+
+            left: 0;
+            right: 0;
+
+            z-index: 3;
+
+            text-align: center;
+
+            color: black;
+
+            font-family:
+                "Times New Roman",
+                Times,
+                serif;
+
+            font-size: 18px;
+
+            font-weight: 500;
+
+            letter-spacing: 0.5px;
+        }
+
+
+
+        /* =========================================
+           PULSE ANIMATION
+        ========================================== */
+
+        @keyframes pulse {
+
+            0% {
+                opacity: 0.45;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0.45;
+            }
+
+        }
+
+
+
+        /* =========================================
+           SUBJECT SCREEN
+        ========================================== */
+
+        .subject-screen {
+
+            min-height: 100vh;
+
+            width: 100%;
+
+            padding:
+                55px 30px;
+
+            display: none;
+
+            background:
+
+                linear-gradient(
+                    135deg,
+                    #ffffff,
+                    #f4f7f5
+                );
+
+            color: #203127;
+        }
+
+
+
+        /* =========================================
+           SUBJECT HEADER
+        ========================================== */
+
+        .main-header {
+
+            max-width: 1150px;
+
+            margin:
+                0 auto 55px;
+
+            text-align: center;
+        }
+
+
+        .main-header h1 {
+
+            color: #1d6041;
+
+            font-family:
+                "Times New Roman",
+                Times,
+                serif;
+
+            font-size: 55px;
+
+            letter-spacing: 4px;
+        }
+
+
+        .main-header p {
+
+            margin-top: 10px;
+
+            color: #718078;
+
+            font-family:
+                "Segoe UI",
+                Arial,
+                sans-serif;
+
+            font-size: 17px;
+        }
+
+
+
+        /* =========================================
+           SUBJECT GRID
+        ========================================== */
+
+        .subjects {
+
+            max-width: 1150px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(
+                    2,
+                    minmax(280px, 1fr)
+                );
+
+            gap: 25px;
+        }
+
+
+
+        /* =========================================
+           SUBJECT CARD
+        ========================================== */
+
+        .subject-card {
+
+            display: block;
+
+            text-decoration: none;
+
+            color: inherit;
+
+            padding: 40px;
+
+            min-height: 210px;
+
+            border-radius: 20px;
+
+            background:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.85
+                );
+
+            border:
+                1px solid
+                #d9e1dc;
+
+            box-shadow:
+                0 10px 35px
+                rgba(
+                    0,
+                    0,
+                    0,
+                    0.06
+                );
+
+            transition:
+                transform 0.25s ease,
+                box-shadow 0.25s ease,
+                border-color 0.25s ease;
+        }
+
+
+        .subject-card:hover {
+
+            transform:
+                translateY(-6px);
+
+            border-color:
+                #6c9b82;
+
+            box-shadow:
+                0 18px 40px
+                rgba(
+                    0,
+                    0,
+                    0,
+                    0.10
+                );
+        }
+
+
+        .subject-card h2 {
+
+            color: #205f40;
+
+            font-family:
+                "Times New Roman",
+                Times,
+                serif;
+
+            font-size: 28px;
+
+            margin-bottom: 15px;
+        }
+
+
+        .subject-card p {
+
+            color: #718078;
+
+            font-family:
+                "Segoe UI",
+                Arial,
+                sans-serif;
+
+            font-size: 16px;
+
+            line-height: 1.6;
+        }
+
+
+
+        /* =========================================
+           MOBILE
+        ========================================== */
+
+        @media (max-width: 700px) {
+
+            .splash-content h1 {
+
+                font-size: 55px;
+
+                letter-spacing: 3px;
+            }
+
+
+            .continue-text {
+
+                font-size: 16px;
+            }
+
+
+            .creator {
+
+                font-size: 16px;
+
+                bottom: 20px;
+            }
+
+
+            .subjects {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .main-header h1 {
+
+                font-size: 40px;
+            }
+
+
+            .subject-card {
+
+                padding: 28px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     OPENING SCREEN
+========================================== -->
+
+<section
+    id="splashScreen"
+    class="splash-screen"
+>
+
+
+    <div class="splash-content">
+
+
+        <h1>
+            PENCIL BEATS
+        </h1>
+
+
+        <p class="continue-text">
+            Tap anywhere on the screen to continue
+        </p>
+
+
+    </div>
+
+
+    <p class="creator">
+        By Mirza Shuaib
+    </p>
+
+
+</section>
+
+
+
+<!-- =========================================
+     SUBJECTS SCREEN
+========================================== -->
+
+<main
+    id="subjectScreen"
+    class="subject-screen"
+>
+
+
+    <header class="main-header">
+
+        <h1>
+            PENCIL BEATS
+        </h1>
+
+        <p>
+            DS4SEM — Semester 1
+        </p>
+
+    </header>
+
+
+
+    <section class="subjects">
+
+
+        <!-- =====================================
+             COMMUNICATION SKILLS
+        ====================================== -->
+
+        <a
+            href="Subjects/coming-soon.html"
+            class="subject-card"
+        >
+
+            <h2>
+                Communication Skills
+            </h2>
+
+            <p>
+                Communication Skills
+            </p>
+
+        </a>
+
+
+
+        <!-- =====================================
+             FUNDAMENTALS OF IT
+        ====================================== -->
+
+        <a
+            href="Fundamentals of IT/index.html"
+            class="subject-card"
+        >
+
+            <h2>
+                Fundamentals of IT
+            </h2>
+
+            <p>
+                Fundamentals of Information Technology
+            </p>
+
+        </a>
+
+
+
+        <!-- =====================================
+             HEALTH AND WELLNESS
+        ====================================== -->
+
+        <a
+            href="Subjects/coming-soon.html"
+            class="subject-card"
+        >
+
+            <h2>
+                Health and Wellness
+            </h2>
+
+            <p>
+                Health & Wellness
+            </p>
+
+        </a>
+
+
+
+        <!-- =====================================
+             DIGITAL & TECHNOLOGICAL SOLUTIONS
+        ====================================== -->
+
+        <a
+            href="Subjects/coming-soon.html"
+            class="subject-card"
+        >
+
+            <h2>
+                Digital & Technological Solutions
+            </h2>
+
+            <p>
+                Digital and Technological Solutions
+            </p>
+
+        </a>
+
+
+    </section>
+
+
+</main>
+
+
+
+<!-- =========================================
+     JAVASCRIPT
+========================================== -->
+
+<script>
+
+
+const splashScreen =
+    document.getElementById(
+        "splashScreen"
+    );
+
+
+const subjectScreen =
+    document.getElementById(
+        "subjectScreen"
+    );
+
+
+
+/* =========================================
+   SHOW SUBJECTS
+========================================= */
+
+function showSubjects() {
+
+    splashScreen.style.display =
+        "none";
+
+    subjectScreen.style.display =
+        "block";
+
+}
+
+
+
+/* =========================================
+   SPLASH → SUBJECTS
+========================================= */
+
+function continueToWebsite() {
+
+    showSubjects();
+
+}
+
+
+
+/* =========================================
+   OPENING LOGIC
+========================================= */
+
+if (
+    window.location.hash ===
+    "#subjects"
+) {
+
+    showSubjects();
+
+}
+
+else {
+
+    subjectScreen.style.display =
+        "none";
+
+}
+
+
+
+/* =========================================
+   CLICK ANYWHERE ON SPLASH
+========================================= */
+
+splashScreen.addEventListener(
+    "click",
+    continueToWebsite
+);
+
+
+</script>
+
+
+</body>
+
+</html>

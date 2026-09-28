@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Floating Point | PENCIL BEATS</title>
+
+    <link
+        rel="stylesheet"
+        href="../../css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<div class="study-page">
+
+
+    <!-- LEFT SIDEBAR -->
+
+    <aside class="study-sidebar">
+
+
+        <div class="sidebar-brand">
+
+            <h1>PENCIL BEATS</h1>
+
+            <p>Fundamentals of IT</p>
+
+        </div>
+
+
+        <div class="sidebar-heading">
+            UNIT 1
+        </div>
+
+
+        <a href="computer-hardware.html" class="topic-link">
+            Computer Hardware
+        </a>
+
+        <a href="input-devices.html" class="topic-link">
+            Input Devices
+        </a>
+
+        <a href="output-devices.html" class="topic-link">
+            Output Devices
+        </a>
+
+        <a href="speakers.html" class="topic-link">
+            Speakers
+        </a>
+
+        <a href="data-types.html" class="topic-link">
+            Data and Its Types
+        </a>
+
+        <a href="computer-model.html" class="topic-link">
+            Simple Model of a Computer
+        </a>
+
+        <a href="memory.html" class="topic-link">
+            Memory
+        </a>
+
+        <a href="data-representation.html" class="topic-link">
+            Data Representation
+        </a>
+
+        <a href="number-systems.html" class="topic-link">
+            Number Systems
+        </a>
+
+        <a href="integer-representation.html" class="topic-link">
+            Integer Representation
+        </a>
+
+        <a href="character-representation.html" class="topic-link">
+            Character Representation
+        </a>
+
+        <a
+            href="floating-point.html"
+            class="topic-link active"
+        >
+            Floating Point
+        </a>
+
+        <a href="html-css-programming.html" class="topic-link">
+            HTML, CSS & Programming
+        </a>
+
+
+    </aside>
+
+
+
+    <!-- MAIN CONTENT -->
+
+    <main class="study-main">
+
+
+        <header class="study-topbar">
+
+            <a
+                href="index.html"
+                class="back-button"
+            >
+                ← Unit 1
+            </a>
+
+
+            <button
+                class="mode-button"
+                onclick="toggleTheme()"
+                id="themeButton"
+            >
+                🌙 Theme
+            </button>
+
+        </header>
+
+
+
+        <article class="notes-container">
+
+
+            <!-- TITLE -->
+
+            <h1>
+                Floating-Point Representation
+            </h1>
+
+
+            <p>
+                Floating-point representation is a method used by
+                computers to represent numbers that may contain a
+                fractional or decimal part.
+            </p>
+
+
+            <p>
+                Examples of such numbers are:
+            </p>
+
+
+            <div class="note-box">
+
+                <p
+                    style="
+                        text-align:center;
+                        font-size:22px;
+                    "
+                >
+
+                    <strong>
+                        3.14 &nbsp;&nbsp; 25.5 &nbsp;&nbsp; 0.125
+                    </strong>
+
+                </p>
+
+            </div>
+
+
+            <p>
+                Floating-point representation allows computers to
+                represent both very large and very small numbers.
+            </p>
+
+
+
+            <!-- BASIC IDEA -->
+
+            <h2>
+                Basic Idea
+            </h2>
+
+
+            <p>
+                A floating-point number is represented using
+                different parts that describe the number.
+            </p>
+
+
+            <p>
+                The important parts are:
+            </p>
+
+
+            <ul>
+
+                <li>
+                    <strong>Sign</strong> — indicates whether the
+                    number is positive or negative.
+                </li>
+
+                <li>
+                    <strong>Exponent</strong> — indicates the
+                    position or scale of the number.
+                </li>
+
+                <li>
+                    <strong>Significand</strong> — contains the
+                    significant digits of the number.
+                </li>
+
+            </ul>
+
+
+            <div class="note-box">
+
+                <p
+                    style="
+                        text-align:center;
+                        font-size:20px;
+                    "
+                >
+
+                    <strong>
+                        Sign + Exponent + Significand
+                    </strong>
+
+                </p>
+
+            </div>
+
+
+
+            <!-- SINGLE PRECISION -->
+
+            <h2>
+                Single Precision
+            </h2>
+
+
+            <p>
+                <strong>Single precision</strong> is a floating-point
+                format that uses <strong>32 bits</strong> to
+                represent a number.
+            </p>
+
+
+            <p>
+                The 32 bits are divided into three parts:
+            </p>
+
+
+            <ul>
+
+                <li>
+                    <strong>1 bit</strong> for the sign
+                </li>
+
+                <li>
+                    <strong>8 bits</strong> for the exponent
+                </li>
+
+                <li>
+                    <strong>23 bits</strong> for the fraction
+                    (significand)
+                </li>
+
+            </ul>
+
+
+            <div class="note-box">
+
+                <p
+                    style="
+                        text-align:center;
+                        font-size:20px;
+                        line-height:2;
+                    "
+                >
+
+                    <strong>Single Precision = 32 bits</strong>
+
+                    <br><br>
+
+                    1 bit Sign
+                    &nbsp; + &nbsp;
+                    8 bits Exponent
+                    &nbsp; + &nbsp;
+                    23 bits Fraction
+
+                </p>
+
+            </div>
+
+
+            <p>
+                Single precision uses less memory than double
+                precision and provides a smaller level of numerical
+                precision.
+            </p>
+
+
+
+            <!-- DOUBLE PRECISION -->
+
+            <h2>
+                Double Precision
+            </h2>
+
+
+            <p>
+                <strong>Double precision</strong> is a floating-point
+                format that uses <strong>64 bits</strong> to
+                represent a number.
+            </p>
+
+
+            <p>
+                The 64 bits are divided into:
+            </p>
+
+
+            <ul>
+
+                <li>
+                    <strong>1 bit</strong> for the sign
+                </li>
+
+                <li>
+                    <strong>11 bits</strong> for the exponent
+                </li>
+
+                <li>
+                    <strong>52 bits</strong> for the fraction
+                    (significand)
+                </li>
+
+            </ul>
+
+
+            <div class="note-box">
+
+                <p
+                    style="
+                        text-align:center;
+                        font-size:20px;
+                        line-height:2;
+                    "
+                >
+
+                    <strong>Double Precision = 64 bits</strong>
+
+                    <br><br>
+
+                    1 bit Sign
+                    &nbsp; + &nbsp;
+                    11 bits Exponent
+                    &nbsp; + &nbsp;
+                    52 bits Fraction
+
+                </p>
+
+            </div>
+
+
+            <p>
+                Double precision provides greater precision and a
+                larger range of values than single precision, but it
+                requires more memory.
+            </p>
+
+
+
+            <!-- WHY FLOATING POINT -->
+
+            <h2>
+                Why is Floating-Point Representation Used?
+            </h2>
+
+
+            <p>
+                Many real-world values contain fractional parts and
+                cannot be represented conveniently using only
+                integers.
+            </p>
+
+
+            <p>
+                Floating-point representation allows a computer to
+                work with numbers such as:
+            </p>
+
+
+            <ul>
+
+                <li>
+                    3.14159
+                </li>
+
+                <li>
+                    12.75
+                </li>
+
+                <li>
+                    0.00125
+                </li>
+
+            </ul>
+
+
+            <p>
+                It is useful when calculations require numbers with
+                decimal or fractional values.
+            </p>
+
+
+
+            <!-- COMPARISON -->
+
+            <h2>
+                Single Precision vs Double Precision
+            </h2>
+
+
+            <table
+                style="
+                    width:100%;
+                    border-collapse:collapse;
+                    margin:25px 0;
+                "
+            >
+
+                <tr>
+
+                    <th style="border:1px solid #cfd8d2; padding:12px;">
+                        Feature
+                    </th>
+
+                    <th style="border:1px solid #cfd8d2; padding:12px;">
+                        Single Precision
+                    </th>
+
+                    <th style="border:1px solid #cfd8d2; padding:12px;">
+                        Double Precision
+                    </th>
+
+                </tr>
+
+
+                <tr>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Total size
+                    </td>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        32 bits
+                    </td>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        64 bits
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Sign bits
+                    </td>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        1
+                    </td>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        1
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Exponent bits
+                    </td>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        8
+                    </td>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        11
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Fraction bits
+                    </td>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        23
+                    </td>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        52
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Precision
+                    </td>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Lower
+                    </td>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Higher
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Memory required
+                    </td>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        Less
+                    </td>
+
+                    <td style="border:1px solid #cfd8d2; padding:12px;">
+                        More
+                    </td>
+
+                </tr>
+
+            </table>
+
+
+
+            <!-- QUICK REVISION -->
+
+            <h2>
+                Quick Revision
+            </h2>
+
+
+            <ul>
+
+                <li>
+                    Floating-point representation is used for
+                    numbers that can contain fractional values.
+                </li>
+
+                <li>
+                    A floating-point representation contains a sign,
+                    exponent and significand/fraction.
+                </li>
+
+                <li>
+                    Single precision uses <strong>32 bits</strong>.
+                </li>
+
+                <li>
+                    Single precision has 1 sign bit, 8 exponent bits
+                    and 23 fraction bits.
+                </li>
+
+                <li>
+                    Double precision uses <strong>64 bits</strong>.
+                </li>
+
+                <li>
+                    Double precision has 1 sign bit, 11 exponent bits
+                    and 52 fraction bits.
+                </li>
+
+                <li>
+                    Double precision provides greater precision but
+                    requires more memory.
+                </li>
+
+            </ul>
+
+
+        </article>
+
+
+    </main>
+
+
+</div>
+
+
+
+<script>
+
+function toggleTheme() {
+
+    document.body.classList.toggle("dark-mode");
+
+    const button =
+        document.getElementById("themeButton");
+
+
+    if (
+        document.body.classList.contains("dark-mode")
+    ) {
+
+        button.textContent = "☀ Light";
+
+    } else {
+
+        button.textContent = "🌙 Theme";
+
+    }
+
+}
+
+</script>
+
+
+</body>
+
+</html>
